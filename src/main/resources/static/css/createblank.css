@@ -1,0 +1,276 @@
+/* 外围3 style START */
+.nav-header .nav-wrapper .test-360 {
+	position: relative;
+	width: 100%;
+	height: 30px;
+}
+.nav-header .nav-wrapper .test-360.hover {
+	color: #30a6f5;
+	background-color: #fff;;
+}
+.nav-header .nav-wrapper .drop-down {
+	margin-top: 25px;
+}
+.main-wrapper .create-box {
+	width: 964px;
+	text-align: center;
+	margin: 50px auto 0;
+}
+.main-wrapper .create-box .create__fill {
+}
+.main-wrapper .create-box .fill__name-box
+{
+    margin:0 auto;
+    text-align:center;
+}
+.main-wrapper .create-box .fill__name-box label {
+	font-size: 22px;
+	font-weight: bold;
+	color: #30a6f5;
+	line-height: 2;
+    width:200px;
+    text-align:right;
+}
+.main-wrapper .create-box .fill__name-box input[type="text"] {
+	width: 660px;
+	height: 46px;
+	font-size: 16px;
+	color: #333333;
+	padding-left: 10px;
+	margin-left: 10px;
+	border-radius: 6px;
+	border: 1px solid #b3b3b3;
+}
+.main-wrapper .create-box .switch-box {
+    display: none;
+    overflow: hidden;
+    clear: both;
+    margin-top: 14px;
+    margin-left: 10px;
+}
+.main-wrapper .create-box .switch-box li {
+    width: 110px;
+    float: left;
+    border: 1px solid #DBDBDB;
+    background-color: #F2F3F5;
+}
+.main-wrapper .create-box .switch-box li.link-360 {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+.main-wrapper .create-box .switch-box li.link-teach {
+    border-radius: 0 4px 4px 0;
+}
+.main-wrapper .create-box .switch-box li.hover {
+    color:#333333;
+    background-color: #fff;
+}
+.main-wrapper .create-box .switch-box li a {
+    font-size: 16px;
+    color:#999999;
+    display: inline-block;
+    line-height: 40px;
+    width: 100%;
+}
+.main-wrapper .create-box .create__btn-new {
+	width: 114px;
+	height: 46px;
+	font-size: 26px;
+	line-height: 1.6;
+	margin: 40px 0 20px 0;
+}
+.main-wrapper .create-box .figure {
+	position: relative;
+	z-index: 2;
+	width: 304px;
+	height: 170px;
+	display: inline-block;
+	border-radius: 8px;
+	border: 2px solid transparent;
+	
+	/*Firefox4.0-*/  
+	-moz-box-shadow: 0 0 10px rgba(51, 51, 51, 0.15);
+  	/*Safariand Google chrome10.0- */ 
+	-webkit-box-shadow:  0 0 10px rgba(51, 51, 51, 0.15);
+  	/*Firefox4.0+、 Google chrome 10.0+ 、 Oprea10.5+ and IE9 */ 
+  	box-shadow:0 0 10px rgba(51, 51, 51, 0.15);
+	background-color: #fff \9;
+	/*behavior: url(css/ie-css3.htc);*/
+}
+@media \0screen\,screen\9 {
+    .main-wrapper .create-box .figure
+    {
+        border: 2px solid #808080 \9;
+    }
+}
+.main-wrapper .create-box .pic-box {
+	float: left;
+	height: 110px;
+	display: inline-block;
+	margin: 28px 20px 28px;
+}
+.main-wrapper .create-box .template-icon {
+	width: 92px;
+	background: url("/images/newimg/pic-3/template-small.png") no-repeat center;
+}
+.main-wrapper .create-box .text-icon {
+	width: 110px;
+	background: url("/images/newimg/pic-3/text-small.png") no-repeat center;
+}
+.main-wrapper .create-box .service-icon {
+	width: 106px;
+	background: url("/images/newimg/pic-3/service-small.png") no-repeat center;
+}
+.main-wrapper .create-box .details-wrapper {
+	float: left;
+	width: 48%;
+	height: 100%;
+	text-align: center;
+}
+.main-wrapper .create-box .details-wrapper .details-title {
+	color: #333333;
+	font-size: 18px;
+	padding-top: 32px;
+}
+.main-wrapper .create-box .details-wrapper .details-info {
+	color: #808080;
+	font-size: 12px;
+	margin-top: 6px;
+}
+.main-wrapper .create-box .details-wrapper .main__btn--new {
+    border-radius:4px;
+	margin-top: 26px;
+	font-size: 18px;
+	width: 74px;
+	height: 30px;
+	line-height: 1.4;
+}
+.main-wrapper .create-box .details-wrapper .main__btn--new:hover {
+    border-color: #1ea0fa;
+    background-color: #1ea0fa
+}
+.main-wrapper .create-box .figure.clicked {
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	border: 2px solid rgba(48, 166, 245, 1);
+	border: 2px solid #30a6f5 \9;
+	/*Firefox4.0-*/  
+	-moz-box-shadow: 0 0 10px rgba(48, 166, 245, 1);
+  	/*Safariand Google chrome10.0- */ 
+	-webkit-box-shadow:  0 0 10px rgba(48, 166, 245, 1);
+  	/*Firefox4.0+、 Google chrome 10.0+ 、 Oprea10.5+ and IE9 */ 
+  	box-shadow:0 0 10px rgba(48, 166, 245, 1);
+	/*behavior: url(css/ie-css3.htc);*/
+}
+.main-wrapper .create-box .create__figure {
+	margin-top: 50px;
+}
+.main-wrapper .create-box .create__figure .figure:first-child {
+	*margin-right: 14px;
+}
+.main-wrapper .create-box .create__figure .figure:first-child + .figure {
+	width: 316px;
+	margin: 0 20px;
+	*margin: 0 14px 0 0;
+}
+
+
+/* 自适应代码 START */
+@media (min-width: 1024px) {
+}
+@media (min-width: 1280px) {
+	.main-wrapper .create-box {
+		width: 1208px;
+		margin-top: 70px;
+	}
+	
+	.main-wrapper .create-box .fill__name-box label {
+		font-size: 24px;
+	}
+	.main-wrapper .create-box .fill__name-box input[type="text"] {
+		width: 800px;
+		height: 50px;
+	}
+	.main-wrapper .create-box .create__btn-new {
+		width: 120px;
+		height: 50px;
+		line-height: 1.8;
+	}
+	.main-wrapper .create-box .figure {
+		width: 380px;	
+		height: 210px;
+	}
+	.main-wrapper .create-box .create__figure .figure:first-child  {
+		*margin-right: 20px;
+	}
+	.main-wrapper .create-box .create__figure .figure:first-child + .figure {
+		width: 400px;
+		margin: 0 24px;
+		*margin: 0 20px 0 0;
+	}
+	.main-wrapper .create-box .pic-box {
+		height: 150px;
+	}
+	.main-wrapper .create-box .template-icon {
+		width: 124px;
+		background: url("/images/newimg/pic-3/template-blue.png") no-repeat center;
+	}
+	.main-wrapper .create-box .text-icon {
+		width: 140px;
+		background: url("/images/newimg/pic-3/text-blue.png") no-repeat center;
+	}
+	.main-wrapper .create-box .service-icon {
+		width: 134px;
+		background: url("/images/newimg/pic-3/service-blue.png") no-repeat center;
+	}
+	.main-wrapper .create-box .pic-box {
+		    margin: 28px 20px 28px 26px;
+	}
+	.main-wrapper .create-box .details-wrapper .details-title {
+		padding-top: 40px;
+		font-size: 24px;
+	}
+	.main-wrapper .create-box .details-wrapper .details-info {
+		font-size: 16px;
+		margin-top: 8px;
+	}
+	.main-wrapper .create-box .details-wrapper .main__btn--new {
+		width: 100px;
+		height: 40px;
+		font-size: 20px;
+		line-height: 1.7;
+		margin-top: 20px;
+	}
+    .main-wrapper .create-box .details-wrapper {
+	width: 195px;
+	text-align: center;
+}
+}
+.create__figure  .details-wrapper .btn-blue-frame
+{
+    border: 2px solid #1ea0fa;
+}
+.qq-connect
+{
+    color:#1ea0fa;
+    font-size:16px;
+}
+.qq-connect .QQ-icon
+{
+   width: 20px;
+    height: 20px;
+    margin-right: 0;
+    background: url(/Images/newimg/pic-3/QQ_light_blue.png) no-repeat center;
+    margin:0px 6px  0px 0px;
+}
+.qq-connect:hover
+{
+    color:#0987db;
+}
+.qq-connect:hover .QQ-icon
+{
+background: url(/Images/newimg/pic-3/QQ_dark_blue.png) no-repeat center;
+}
+/* 自适应代码 END */
+/* 外围3 style END */

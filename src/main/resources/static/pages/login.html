@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <title>登录</title>
+    <meta name="applicable-device" content="pc">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../css/index.css?v=3" type="text/css">
+    <link rel="stylesheet" href="answerQuestionCss/login.css">
+</head>
+<body id="body1" class="fp-viewing">
+    <div class="fullpage-wrapper">
+        <div class="fullpage-main"></div>
+        <div id="divSojump" class="validate-box">
+            <fieldset class="validate-wrapper" style="padding: 0 50px;">
+                <h1 id="hlogintxt" class="validate-caption">登录</h1>
+                <ul>
+                    <li>
+                        <label for="UserName" class="icon user-icon"></label>
+                        <input name="UserName" id="UserName" placeholder="请输入用户名" class="validate-input user-name" type="text">
+                        <input type="hidden" name="hfUserName" id="hfUserName">
+                        <div class="divclear"></div>
+                    </li>
+                    <li>
+                        <label for="password" class="icon password-icon"></label>
+                        <input name="Password" type="password" id="Password" placeholder="请输入登录密码" class="validate-input">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset style="text-align: center; margin-top: 60px; padding: 0 50px;">
+                <button name="LoginButton" id="LoginButton" class="submitbutton" onclick="login()" onmouseover="this.className='submitbutton submitbutton_hover';" onmouseout="this.className='submitbutton';" style="color:White;">登 录</button>
+                <span style="color: red; line-height: 28px;"></span>
+            </fieldset>
+        </div>
+    </div>
+    <script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../js/zhezhao.js?v=3" type="text/javascript"></script>
+    <script src="../plugins/layer/layer.js"></script>
+    <script src="../plugins/cookie/jquery.cookie.js"></script>
+    <script src="../common/common.js"></script>
+    <script src="answerQuestionJs/login.js"></script>
+</body>
+</html>

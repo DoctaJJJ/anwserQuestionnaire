@@ -1,0 +1,79 @@
+/* 外围8 问卷回收站 style START  */
+.main-wrapper .fillet-box {
+    width: 964px;
+    margin: 40px auto 0;
+}
+.main-wrapper .fillet-box .fillet-tit {
+    line-height: 30px;
+}
+.main-wrapper .fillet-box .finish-btn {
+    width: 120px;
+}
+.main-wrapper .fillet-box .apply-btn {
+    width: 80px;
+}
+.main-wrapper .fillet-box .recovery-foot {
+    line-height: 36px;
+    background-color: #f7f8f9;
+}
+.main-wrapper .fillet-box .fillet-tit .important-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: text-top;
+    background: url("https://www.wjx.cn/Images/newimg/pic-7/important1_18.png") no-repeat center;
+}
+
+/*.main-wrapper .fillet-box .fillet-content tr td:first-child {
+	border-left: none \9;
+}*/
+.fillet-box tr td:last-child {
+    border-right: 1px solid #d7d8d9;
+}
+.fillet-box .fillet-content tr td:last-child {
+    border-right: 1px solid #d7d8d9;
+}
+.fillet-box  .link-empty,
+.fillet-box .fillet-content .link-empty {
+    color: #333333;
+}
+.fillet-box  .link-empty:hover ,
+.fillet-box .fillet-content .link-empty:hover {
+    color: #30a6f5;
+}
+.fillet-box  .recovery-btn,
+.fillet-box .fillet-content .recovery-btn {
+    width: 12px;
+    height: 12px;
+    border: none;
+    background: url("/Images/newimg/pic-7/run_12.png") no-repeat center;
+}
+.fillet-box .fillet-content .recovery-btn:hover {
+    background: url("/Images/newimg/pic-7/run1_12.png") no-repeat center;
+}
+.fillet-box .fillet-content .remove-btn {
+    width: 13px;
+    height: 13px;
+    border: none;
+    background: url("/Images/newimg/pic-7/delete_13.png") no-repeat center;
+}
+.fillet-box .fillet-content .remove-btn:hover {
+    background: url("/Images/newimg/pic-7/delete1_13.png") no-repeat center;
+}
+.fillet-box .message-list .link-empty {
+    color: #30a6f5;
+}
+.fillet-box .message-list .link-empty:hover {
+    color: #0078c8;
+}
+@media (min-width: 1600px) {
+    .main-wrapper .fillet-box {
+        margin: 20px auto;
+    }
+}
+@media (min-width: 1920px) {
+    .main-wrapper .fillet-box {
+        margin: 40px auto;
+    }
+}
+/* 外围8 问卷回收站 style END  */

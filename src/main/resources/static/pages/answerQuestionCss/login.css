@@ -1,0 +1,31 @@
+.divAnti input {
+    width: 140px !important;
+    padding-left: 16px !important;
+    border: none;
+    height: 46px !important;
+    line-height:46px !important;
+    font-size: 14px;
+    padding-left: 46px;
+    border-radius: 100px;
+    border: 1px solid #e6e6e6;
+    float: left !important;
+}
+/*.validate-box .submit-wrapper .third-party-login .wxpenguin-icon {*/
+    /*width: 56px;*/
+    /*height: 56px;*/
+    /*margin-right: 0;*/
+    /*background: url("//image.wjx.cn/images/register-login/weixin-nor.png") no-repeat center;*/
+/*}*/
+/*.validate-box .submit-wrapper .third-party-login .wxpenguin-icon:hover {*/
+    /*background: url("//image.wjx.cn/images/register-login/weixin.png") no-repeat center;*/
+/*}*/
+#LoginButton{
+    text-align: center;
+    width: 100% !important;
+    height: 46px !important;
+    font-size: 20px !important;
+    border-radius: 100px !important;
+    background-color: #fa911e;
+    border: none !important;
+    cursor: pointer;
+}

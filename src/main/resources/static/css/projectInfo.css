@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+i{
+    margin-right: 5px;
+}
+.form-group label{
+    text-align: right;
+}
+.btn{
+    padding: 5px 6px;
+}
+.contextPos {
+    margin:20px 25px;
+}
+.surveyHeader{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+.surveyForm{
+    margin-top: 10px;
+}
+.projectInput{
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    height: 30px;
+    width: 160px;
+    background-color: #fff;
+    padding: 0 15px;
+}
+.projectInput:focus{
+    border-color: #409EFF;
+    outline: 0;
+}
+.searchBtn{
+    border: 1px solid #dcdfe6;
+    height: 30px;
+    width: 45px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #409EFF;
+}
+.searchBtnstyle{
+    border-color: #409EFF;
+    outline: 0;
+}
+.addBtn{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e4eaec;
+    background-color: transparent;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+.timeAdmin{
+    /*display: flex;*/
+    justify-content: center;
+}
+.time_div{
+    width:100%;
+}
+.show-calendar{
+    right: 116px;
+    left: auto;
+    top: 104px;
+}
+.visiblesTable{
+    display: none;
+}
+#questionnaireAnswerName{
+    width: 355px;
+    margin: 0 auto;
+    display: block;
+}
+/*.fixed-table-pagination{*/
+/*display: none!important;*/
+/*}*/
+@media screen and (max-width: 772px){
+    .project_table{
+        overflow: auto
+    }
+}
+.inputFile{
+    opacity: 0;
+    margin-top: -51px;
+    /*margin-left: 159px;*/
+}
+#fileName{
+    height: 32px;
+}
+#msg{
+    vertical-align: top;
+    resize:none;
+}
+.bootstrap-table{
+    margin-top: 10px;
+}
+.fontstyle{
+    margin-top: 10px ;
+    color:#333333;
+    font-size:18px;
+}
+.inputstyle{
+     color:#333333;
+     font-weight: normal;
+     font-size:16px;
+ }
+.project_font {
+    letter-spacing: 0.5px;
+    padding-top: 7px;
+    font-size:16px;
+}
+#addPoint{
+    top: 100px;
+}
+#sendTimeChoose{
+    display: none;
+}
+.borderStyle{
+    /*border-bottom: 1px solid #e4e4e4;*/
+}
+.logoStyle{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+*{
+    font-family:Tahoma,Verdana;
+}
+.fontWeight{
+    font-weight: normal;
+}
+
+
+::-webkit-input-placeholder { color:#B2B2B2; }
+::-moz-placeholder { color:#B2B2B2; } /* firefox 19+ */
+:-ms-input-placeholder { color:#B2B2B2; } /* ie */
+input:-moz-placeholder { color:#B2B2B2; }
+
+.daterangepicker.dropdown-menu {
+    max-width: none;
+    z-index: 3001;
+    right: 551.5px !important;
+}
+
+table.ui_border, table.ui_dialog {
+    width: auto;
+    border-spacing: 0;
+    *border-collapse: collapse;
+}
+.ui_border, .ui_state_visible, .ui_state_focus, .ui_state_lock {
+    BOX-SHADOW: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.updateProjectStyle{
+    background-color:#f5f5f5;
+    width:170px;
+    height: 35px;
+    border:0.5px solid #001a35;
+}
+.updateInputProject{
+    height:35px;
+    width:400px;
+    margin-left:170px;
+    margin-top:-35px;
+    border-right:0.5px solid #001a35;
+    border-top:0.5px solid #001a35;
+    border-bottom:0.5px solid #001a35;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    font-weight: 700;
+}
+.formtable{
+    width: 100%;
+    background-color: #999;
+}
+.value{
+    background-color: #FFFFFF;
+    padding: 5px;
+}
+.formtable tr {
+    background-color: #f5f5f5;
+    align: right;
+}
+.Validform_label{
+    padding: 5px;
+    white-space: nowrap;
+}
+.Validform_label {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+tbody > tr > td[align="right"] {
+    min-width: 90px;
+}
+
+td .input{
+    outline: none;
+    margin: 0px;
+}
+.formtable .inputxt {
+    border: 1px solid #999;
+    border-radius: 3PX;
+    height: 14px;
+    height: 35PX;
+    padding: 7px 0 7px 5px;
+    /*padding: 10px 0px 2px 5px;*/
+    line-height: 14PX;
+    font-size: 12px;
+    display: inline-block;
+    width: 350px;
+}
+.modal-header .close {
+    margin-top: -6px;
+}
+
+
+.updateSpan{
+    float:right;
+    margin-right:10px;
+    margin-top:-7px;
+}
+
+
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl01_Head1">
+    <title>我的问卷</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta id="ctl01_keywords" name="keywords"/>
+
+
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link id="ctl01_cssdefault" rel="stylesheet" type="text/css" href="../css/default.css?v=4"/>
+    <link id="ctl01_quetsioncss" rel="stylesheet" type="text/css" href="../css/myquestionnaires.css?v=11"/>
+    <link id="ctl01_cssmaster" rel="stylesheet" type="text/css" href="../css/wjxmaster.css?v=4"/>
+    <link rel="stylesheet" type="text/css" href="../css/choosetype.css?v=4"/>
+    <link rel="stylesheet" type="text/css" href="../css/folder-set.css?v=2"/>
+
+
+    <style>
+        .headerFixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .panel-default > .panel-heading {
+            color: #333;
+            background-color: #f5f5f5;
+            border-color: #ddd;
+            text-align: left;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div id="BS">
+
+    <!--添加项目模态框-->
+    <div class="modal fade" id="copyQuestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border-radius: 5px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <span aria-hidden="true">&times;</span></button>
+                    </button>
+                    <h3 class="modal-title" id="addPointLabel">复制问卷</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="questNameModal" class="control-label">问卷名称:</label>
+                        <input type="text" id="questNameModal" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="copyPointBtn()">复制</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="header">
+
+    </div>
+
+    <div class="BS-box" style="text-align:left;margin-top: 35px;">
+
+
+        <div class="main-wrapper">
+            <div id="ctl01_ContentPlaceHolder1_divhasques" class="my-container">
+                <div class="survey-wrapper clearfix">
+                    <div class="survey-left pull-left" style="">
+                        <div id="ctl01_ContentPlaceHolder1_searchPapaer" class="survey-create clearfix">
+                            <div class="create-add pull-left">
+
+                                <a href='createProject.html' title="创建新问卷"
+                                   class="btn btn-default btn-lg pull-left create-btn">
+                                    <i class="icon create-icon"></i>创建项目</a>
+                                <div id="ctl01_ContentPlaceHolder1_divInfo" class="create-search pull-left"
+                                     style="margin-right:10px;">
+                                    <input name="ctl01$ContentPlaceHolder1$txtName" type="text"
+                                           placeholder="请输入项目名称进行搜索..."
+                                           id="keyWord" class="serarchbox"
+                                           onfocus="if(placeholder=='请输入项目名称进行搜索...'){placeholder='';}"
+                                           onblur="if(placeholder==''){placeholder='请输入项目名称进行搜索...';}"
+                                    >
+
+
+                                    <div class="icon search-icon buttonboder" id="myProject" onclick="getProjectQuest()"></div>
+
+                                </div>
+                                <div id="ctl01_ContentPlaceHolder1_divStatus" class="pull-left">
+                                    <input name="ctl01$ContentPlaceHolder1$hidStatus" type="hidden"
+                                           id="ctl01_ContentPlaceHolder1_hidStatus" value="-1"/>
+                                    <!--<div class="status-box">-->
+                                    <!--<div class="status-cur"><span>问卷状态</span> <i class="caret status-ico"></i>-->
+                                    <!--</div>-->
+                                    <!--<ul class="status-content">-->
+                                    <!--<li data-value="-1">问卷状态</li>-->
+                                    <!--<li data-value="0">草稿</li>-->
+                                    <!--<li data-value="1">运行中</li>-->
+                                    <!--<li data-value="2">暂停</li>-->
+                                    <!--<li data-value="0">过期</li>-->
+                                    <!--</ul>-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+
+
+                            <input type="hidden" name="ctl01$ContentPlaceHolder1$hfCompanyUsers"
+                                   id="ctl01_ContentPlaceHolder1_hfCompanyUsers" value="null"/>
+
+                            <a id="ctl01_ContentPlaceHolder1_hrefDelete"
+                               class="btn btn-default btn-lg pull-right refuse-btn" style="margin-left:10px;">
+                                <i class="icon refuse-icon"></i>历史问卷
+                            </a>
+
+
+                            <input type="hidden" name="ctl01$ContentPlaceHolder1$hfFolder"
+                                   id="ctl01_ContentPlaceHolder1_hfFolder" value="null"/>
+
+                        </div>
+
+
+                        <!-- 新修改文件夹功能 START -->
+                        <div id="ctl01_ContentPlaceHolder1_surveyfolder" class="survey__folder"></div>
+                        <!-- 新修改文件夹功能 END -->
+
+
+                        <div id="ctl01_ContentPlaceHolder1_qls" class="survey-list">
+
+
+                            <div class="panel-group" id="panel-23802">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" name="ctl01$ContentPlaceHolder1$hfActivity"
+                   id="ctl01_ContentPlaceHolder1_hfActivity" value="26122768"/>
+            <input type="hidden" name="ctl01$ContentPlaceHolder1$hfStatus" id="ctl01_ContentPlaceHolder1_hfStatus"
+                   value="2"/>
+            <input type="hidden" name="ctl01$ContentPlaceHolder1$hfFolderName"
+                   id="ctl01_ContentPlaceHolder1_hfFolderName"/>
+            <input type="submit" name="ctl01$ContentPlaceHolder1$btnStatusChange" value="发布"
+                   id="ctl01_ContentPlaceHolder1_btnStatusChange" style="display: none;"/>
+            <input type="submit" name="ctl01$ContentPlaceHolder1$btnDelete" value="删除"
+                   id="ctl01_ContentPlaceHolder1_btnDelete" style="display: none;"/>
+            <input type="submit" name="ctl01$ContentPlaceHolder1$btnSetFolder" value="设置文件夹"
+                   id="ctl01_ContentPlaceHolder1_btnSetFolder" style="display: none;"/>
+            <input type="submit" name="ctl01$ContentPlaceHolder1$btnDeleteFolder" value="删除文件夹"
+                   id="ctl01_ContentPlaceHolder1_btnDeleteFolder" style="display: none;"/>
+
+            <div id="ctl01_ContentPlaceHolder1_lmlpage" class="my-container">
+                <div class="page-box page-box-myquestion" style="color: #808080; font-size: 14px">
+                    <div id="ctl01_ContentPlaceHolder1_pagehttml" class="page-list pager-linkpage"></div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div id="ctl01_footlink" class="my-footer MP-footer">
+
+    <div id="ctl01_divWjxFooter">
+        <i class="log-dec">Copyright &copy; 沈阳哲航信息科技有限公司</i><!-- 问卷星底部 -->
+    </div>
+</div>
+
+<script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../plugins/cookie/jquery.cookie.js"></script>
+<script src="../js/jquery.base64.js"></script>
+<script src="../plugins/layer/layer.js"></script>
+<script src="../common/common.js"></script>
+<script src="answerQuestionJs/myQuestionnaire.js"></script>
+</body>
+</html>
+

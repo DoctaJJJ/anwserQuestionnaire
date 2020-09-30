@@ -1,0 +1,214 @@
+/* 外围2 style START */
+.main-wrapper {
+	position: relative;
+}
+.main-wrapper > * {
+	text-align: center;
+}
+.main-wrapper .module-box {
+	text-align: center;
+	margin: 35px auto 0;
+}
+.main-wrapper .module-box .figure {
+	position: relative;
+	z-index: 2;
+	width: 308px;
+	*width: 302px;
+	height: 216px;
+	margin: 0 10px 20px;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 8px;
+	border: 2px solid transparent;
+	border: 2px solid #dedfe0 \9;
+	/*Firefox4.0-*/  
+	-moz-box-shadow: 0 0 10px rgba(51, 51, 51, 0.2);
+  	/*Safariand Google chrome10.0- */ 
+	-webkit-box-shadow:  0 0 10px rgba(51, 51, 51, 0.2);
+  	/*Firefox4.0+、 Google chrome 10.0+ 、 Oprea10.5+ and IE9 */ 
+  	box-shadow:0 0 10px rgba(51, 51, 51, 0.2);
+	background-color: #fff \9;
+    float:left;
+	/*behavior: url(css/ie-css3.htc);*/
+}
+
+.main-wrapper .module-box .figure.clicked {
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	border: 2px solid rgba(48, 166, 245, 1);
+	border: 2px solid #30a6f5 \9;
+	/*Firefox4.0-*/  
+	-moz-box-shadow: 0 0 10px rgba(48, 166, 245, 1);
+  	/*Safariand Google chrome10.0- */ 
+	-webkit-box-shadow:  0 0 10px rgba(48, 166, 245, 1);
+  	/*Firefox4.0+、 Google chrome 10.0+ 、 Oprea10.5+ and IE9 */ 
+  	box-shadow:0 0 10px rgba(48, 166, 245, 1);
+	/*behavior: url(css/ie-css3.htc);*/
+}
+.main-wrapper .module-box .pic-box {
+	width: 76px;
+	height: 76px;
+	margin: 34px 16px 34px 30px;
+    *margin: 34px 16px 34px 25px;
+}
+.main-wrapper .module-box .details-wrapper {
+	width: 56%;
+	*width: 61%;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.main-wrapper .module-box .details-wrapper .details-title {
+	overflow: hidden;
+	color: #333333;
+	font-size: 20px;
+	padding-top: 34px;
+	margin-bottom: 7px;
+}
+.main-wrapper .details__more {
+	display: none;
+	width: 60px;
+	height: 20px;
+	line-height: 18px;
+	text-align: center;
+	padding: 0;
+	margin: 4px 0 0 10px;
+	border-radius: 100px;
+}
+.main-wrapper .figure.clicked .details__more {
+	display: block;
+}
+.main-wrapper .module-box .details-wrapper .details-info {
+	color: #808080;
+	font-size: 14px;
+	line-height: 1.7;
+}
+.main-wrapper .main__btn--new {
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+	line-height: 36px;
+	border-width: 2px;
+	border-radius: 6px;
+}
+.main-wrapper .module-box .main__btn--new {
+	position: absolute;
+	left: 50%;
+	bottom: 14px;
+	margin-left: -48px;
+}
+.main-wrapper .module-box .survey-icon {
+	background: url("../images/survey-gray.png") no-repeat center;
+}
+.main-wrapper .module-box .exam-icon {
+	background: url("../images/exam-gray.png") no-repeat center;
+}
+.main-wrapper .module-box .vote-icon {
+	background: url("../images/vote-gray.png") no-repeat center;
+}
+.main-wrapper .module-box .search-icon {
+	background: url("../images/apply-gray.png") no-repeat center;
+}
+.main-wrapper .module-box .employee-icon {
+	background: url("../images/360-gray.png") no-repeat center;
+}
+.main-wrapper .module-box .online-icon {
+	background: url("../images/assessment-gray.png") no-repeat center;
+}
+.main-wrapper .module-box .figure.clicked .survey-icon {
+	background: url("../images/survey-blue.png") no-repeat center;
+}
+.main-wrapper .module-box .figure.clicked .exam-icon {
+	background: url("../images/exam-blue.png") no-repeat center;
+}
+.main-wrapper .module-box .figure.clicked .vote-icon {
+	background: url("../images/vote-blue.png") no-repeat center;
+}
+.main-wrapper .module-box .figure.clicked .search-icon {
+	background: url("../images/apply-blue.png") no-repeat center;
+}
+.main-wrapper .module-box .figure.clicked .employee-icon {
+	background: url("../images/360-blue.png") no-repeat center;
+}
+.main-wrapper .module-box .figure.clicked .online-icon {
+	background: url("../images//assessment-blue.png") no-repeat center;
+}
+	.main-wrapper .module-box,
+	.main-wrapper .create-box {
+		width: 964px;
+	}
+	.main-wrapper .module-box .figure:first-child,
+	.main-wrapper .module-box .figure:first-child + .figure + .figure + .figure {
+		margin-left: 0;
+	}
+	.main-wrapper .module-box .figure:first-child + .figure + .figure,
+	.main-wrapper .module-box .figure:first-child + .figure + .figure + .figure + .figure + .figure  {
+		margin-right: 0;
+	}
+    @media (min-width: 1280px) {
+    .main-wrapper .module-box .figure {
+        margin: 0 13px 26px;
+    }
+    .main-wrapper .module-box, .main-wrapper .create-box
+    {
+     width:990px;
+    }
+}
+ .examfigurestar
+ {
+position: absolute;
+	top: -2px;
+	right: 16px;
+	width: 23px;
+	height: 28px;
+	background: url("../images/star.png") no-repeat center;
+    margin:0px;
+ }
+
+/* 外围2 style END */
+
+.common__btn{
+    font-size: 20px;
+    color: #333;
+    border: 2px solid #cacbcc;
+    line-height: 52px;
+    border-radius: 28px;
+    display: inline-block;
+}
+.common__btn i{
+    display: block;
+    width: 28px;
+    height: 28px;
+    float: left;
+    margin: 12px 10px 0 0;
+}
+.common__btn .custom__icon{
+    background-image:url(../images/custom.png);
+}
+.common__btn .confirm__icon{
+    background-image:url(../images/confirm.png);
+}
+.custom__btn{
+    padding: 0 32px;
+}
+.confirm__btn{
+    padding: 0 39px;
+}
+.big-custom__btn{
+    border: 2px dashed #cacbcc;
+    padding: 80px 60px;
+    margin-left:13px;
+    border-radius: 8px;
+}
+
+
+.common__btn:hover{
+    color: #ff941a;
+    border-color: #ffcf99;
+}
+.common__btn:hover .custom__icon{
+    background-image:url(../images/custom-hover.png);
+}
+.common__btn:hover .confirm__icon{
+    background-image:url(../images/confirm-hover.png);
+}

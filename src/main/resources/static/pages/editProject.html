@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta id="ctl01_keywords" name="keywords" />
+    <title>编辑项目</title>
+    <link id="ctl01_cssdefault" rel="stylesheet" type="text/css" href="../css/default.css?v=4" />
+    <link rel="stylesheet" href="../css/myquestionnaires.css">
+    <link id="ctl01_cssmaster" rel="stylesheet" type="text/css" href="../css/wjxmaster.css?v=4" />
+    <link rel="stylesheet" type="text/css" href="../css/choosetype.css?v=4" />
+    <link rel="stylesheet" href="../css/createblank.css">
+    <script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../plugins/cookie/jquery.cookie.js"></script>
+    <script src="../plugins/layer/layer.js"></script>
+    <script src="../common/common.js"></script>
+    <script src="../js/zhezhao.js?v=3"></script>
+    <script src="../js/modernizr.js"></script>
+    <script src="../js/baidutg.js?v=3"></script>
+    <script src="answerQuestionJs/editProject.js"></script>
+
+</head>
+<body>
+<div class="header">
+
+</div>
+
+<div id="ctl01_ContentPlaceHolder1_divCreate" class="nav-header">
+    <div class="container" style="height: 70px;">
+        <div class="nav-wrapper clearfix">
+            <h1 id="ctl01_ContentPlaceHolder1_spanTitle" class="hd-title pull-left" style="line-height: 25px;">编辑项目</h1>
+        </div>
+    </div>
+</div>
+
+<div class="main-wrapper">
+    <div class="create-box">
+        <div class="create__fill">
+            <div class="fill__name-box clearfix">
+                <label for="" class="pull-left" id="spanName">项目名称：</label>
+                <div class="pull-left">
+                    <input id="projectName" name="ctl01$ContentPlaceHolder1$txtQName" type="text" id="" class="pull-left" style="line-height:50px; margin-bottom: 14px;">
+                </div>
+            </div>
+            <div class="fill__name-box clearfix">
+                <label for="" class="pull-left" id="spanIntro">项目描述：</label>
+                <div class="pull-left">
+                    <textarea id="inputIntro" name="ctl01$ContentPlaceHolder1$txtQName" type="text"class="pull-left describe" style="height: 100px;width: 800px;border-radius: 5px;margin-left: 10px;font-size: 16px;line-height: 40px;padding-left: 10px"></textarea>
+                </div>
+            </div>
+            <div class="btn-block" style="position:relative;">
+                <table align="center">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div id="spanCode" style="float: left; display: inline; margin-top: 60px">
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td valign="middle" style="padding-bottom: 30px;">
+                            <div onclick="modifyProject()" id="ctl01_ContentPlaceHolder1_lbtnNextStep" class="btn btn-default create__btn-new" style="width:200px;">
+                            保存修改
+                            </div>
+                                <div style="float: right; display: inline; margin-top: 58px; margin-left: 30px;">
+                                <span id="ctl01_ContentPlaceHolder1_lblMsg" style="color:Red;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

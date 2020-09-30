@@ -1,0 +1,127 @@
+.selectpick-div {
+    position: relative;
+    font-size: 14px;
+    color: #333;
+    line-height: 2;
+    text-align: left;
+    padding: 0 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #abafb3;
+    background-color: #f7f8f9;
+}
+
+.selectpick-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 5px dashed;
+    border-top: 5px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+/*ä¸‹æ‹‰æ¡†çš„ä¸»ä½“*/
+.selectpick-options {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    *padding: 0 10px;
+    *background-color: #fff;
+    border: 1px solid #abafb3;
+    border-top: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/*.selectpick-options ul {
+	border: 1px solid #abafb3;
+	border-top: none;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}*/
+
+.selectpick-options ul li {
+    color: #333;
+    font-size: 14px;
+    padding: 0 11px;
+    *padding: 0 \8;
+    text-align: left;
+    background-color: #fff;
+}
+
+.selectpick-options ul li:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.selectpick-options li:hover {
+    background-color: #ebf0f5;
+}
+
+.selectpick-options ul li.selectpick-options-selected {
+    color: #333;
+}
+
+/*è®¾ç½®ä¸ºdisabledçš„æ—¶å€™*/
+.selectpick-no-select {
+    cursor: default;
+    color: #9a9898;
+    background-color: #F5F5F5;
+}
+
+/*è®¾ç½®ä¸‹æ‹‰æ¡†çš„ä¸é€æ˜Žåº¦*/
+.select-hide {
+    display: none;
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.selectpick-options li label {
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: inline-block;
+}
+
+.selectpick-div-box {
+    position: relative;
+    z-index: 4;
+    display: inline-block;
+    float: left;
+    *zoom: 1;
+    *display: inline;
+}
+
+.selectpick-div.clicked {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.optHead {
+    width: 100%;
+    *width: 76px;
+    line-height: 30px;
+    height: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 11px;
+    text-align: left;
+    background-color: #fff;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+

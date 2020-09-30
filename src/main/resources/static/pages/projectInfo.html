@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta id="ctl01_keywords" name="keywords"/>
+    <title>项目信息查看</title>
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-table/css/bootstrap-table.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-select/bootstrap-select.min.css">
+    <link id="ctl01_cssdefault" rel="stylesheet" type="text/css" href="../css/default.css?v=4" />
+    <link rel="stylesheet" href="../css/myquestionnaires.css">
+    <link id="ctl01_cssmaster" rel="stylesheet" type="text/css" href="../css/wjxmaster.css?v=4" />
+    <link rel="stylesheet" type="text/css" href="../css/choosetype.css?v=4" />
+    <link rel="stylesheet" href="../css/createblank.css">
+
+    <script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../plugins/cookie/jquery.cookie.js"></script>
+    <script src="../plugins/layer/layer.js"></script>
+    <script src="../common/common.js"></script>
+    <script src="answerQuestionJs/projectInfo.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            background-color: #ebf0f5;
+        }
+
+        .spanTitle {
+            float: left;
+            font-size: 21px;
+            margin-top: 7px;
+            margin-left: 5px;
+        }
+
+        .main-wrapper .create-box .fill__name-box {
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-header {
+            background-color: #fff;
+            font-size: 14px;
+        }
+
+        .main-wrapper .create-box {
+            width: 1175px;
+            margin-top: 50px;
+            background-color: #fff;
+            border-radius: 31px;
+        }
+
+        .main-wrapper .create-box .create__fill {
+            padding: 20px;
+            text-align: center;
+            border-radius: 70px;
+        }
+
+        .main-wrapper .create-box .fill__name-box {
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .main-wrapper .create-box .fill__name-box label {
+            width: 150px;
+        }    </style>
+
+
+</head>
+<body>
+<div class="header">
+
+</div>
+
+    <div id="ctl01_ContentPlaceHolder1_divCreate" class="nav-header">
+    <div class="container" style="height: 70px;">
+        <div class="nav-wrapper clearfix">
+            <h1 id="ctl01_ContentPlaceHolder1_spanTitle" class="hd-title pull-left" style="line-height: 31px;">项目详情</h1>
+        </div>
+    </div>
+</div>
+
+    <div class="main-wrapper" style="margin-top: -10px;">
+    <div class="create-box" style="margin-top: 50px;margin-bottom: 50px;">
+        <div class="create__fill">
+            <div class="fill__name-box clearfix">
+                <label class="pull-left" id="spanName" style="font-size: 22px;">项目名称：</label>
+                <span class="spanTitle" id="projectNameSpan" style="text-align: left;width: 950px;"></span>
+            </div>
+            <div class="fill__name-box clearfix">
+                <label class="pull-left" id="spanIntro" style="font-size: 22px;">创建时间：</label>
+                <span class="spanTitle"  id="createTimeSpan"></span>
+            </div>
+            <div class="fill__name-box clearfix">
+                <label class="pull-left" id="ss" style="font-size: 22px;">负责人员：</label>
+                <span class="spanTitle" id="adminSpan"></span>
+            </div>
+            <div class="fill__name-box clearfix" style="font-size: 22px;">
+                <label class="pull-left" id="dd" style="font-size: 22px;">项目描述：</label>
+                <span class="spanTitle" style="width: 950px; text-align: left;"  id="projectContentSpan"></span>
+            </div>
+            <div class="fill__name-box clearfix">
+                <label class="pull-left" id="ddd" style="font-size: 22px;">测卷详情：</label>
+            </div>
+
+            <div class="bootstrap-table" style="width: 1050px;text-align:  center;font-size: 14px;margin: auto">
+                <div class="fixed-table-toolbar"></div>
+                <div class="fixed-table-container" style="padding-bottom: 0px;">
+                    <div class="fixed-table-body">
+                        <div class="fixed-table-loading" style="top: 41px; display: none;">正在努力地加载数据中，请稍候……
+                        </div>
+                        <table class="questionnaire_table table table-hover table-striped"
+                               style="word-wrap:break-word; word-break:break-all">
+                            <thead>
+                            <tr>
+                                <th style="text-align: center; " data-field="Number">
+                                    <div class="th-inner ">序号</div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                                <th style="text-align: center; " data-field="questionname">
+                                    <div class="th-inner ">试卷名称</div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                                <th style="text-align: center; " data-field="questionname">
+                                    <div class="th-inner ">发布时间</div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                                <th style="text-align: center; " data-field="operation">
+                                    <div class="th-inner ">操作</div>
+                                    <div class="fht-cell"></div>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody id="questTableBody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

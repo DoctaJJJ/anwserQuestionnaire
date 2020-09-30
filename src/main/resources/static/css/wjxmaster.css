@@ -1,0 +1,274 @@
+/* 头部style START */
+.header {
+    background-color: #0078c8;
+    height: 54px;
+    font-size: 16px;
+    color: #fff;
+    margin:0 auto;
+}
+.logo {
+    margin-top: 10px;
+    height:34px;
+    line-height:34px;
+    vertical-align:middle;
+}
+.logo .returnicon {
+    background: url("../images/return.png") no-repeat center;
+    width: 34px;
+    height: 34px;
+    margin-right: 15px;
+    display: inline-block;
+}
+.logo .hover {
+    color: #fff;
+}
+.logo .hover:hover {
+    color: #fff799;
+}
+.logohover
+{
+    width:98px;
+    height:36px;
+    background-image: url(../images/mobieindexnew.png) ;
+    background-size:cover;
+    display:inline-block;
+}
+@media \0screen\,screen\9 {
+    .logohover {
+        background-image:none;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/mobieindexnew.png',  sizingMethod='scale')\9;
+    } }
+.logo .hover:hover .returnicon {
+    background: url("../images/return-hover.png") no-repeat center;
+}
+.user-wrapper {
+    position: relative;
+    z-index:201;
+}
+.user-wrapper dl {
+    padding: 0 10px;
+    cursor: pointer;
+}
+.user-wrapper .user-name {
+    color: #fff;
+    display: inline-block;
+    line-height: 54px;
+}
+.user-wrapper dl:last-child {
+    padding-right: 0;
+}
+.user-wrapper dl.IE-8 {
+    padding-right: 0 \9;
+}
+.my-question {
+    line-height: 54px;
+}
+.my-question .box {
+    float: left;
+    margin-right: 20px;
+}
+.my-question .line {
+    height: 16px;
+    width: 1px;
+    background-color: #fff;
+    float: left;
+    margin-top: 20px;
+}
+.user-info {
+    line-height: 54px;
+    display: table-cell;
+    position:relative;
+    z-index:201;
+}
+.user-info dt,
+.user-info dd {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+}
+.user-info  span.btn-s
+{
+    width:68px;
+    height:30px;
+    line-height:30px;
+    vertical-align:middle;
+    border:1px solid #fff;
+    font-size:16px;
+    margin-top:12px;
+}
+.user-info  span.site-res
+{
+    background:#fff;
+}
+.user-info  span.site-login
+{
+    color:#fff;
+}
+.user-info.hover  span.btn-s
+{
+    width:68px;
+    height:30px;
+    line-height:30px;
+    vertical-align:middle;
+    border:1px solid #fff799;
+    font-size:16px;
+    margin-top:12px;
+}
+.user-info.hover  span.site-res
+{
+    background:#fff799;
+    color:#0078c8;
+}
+.user-info.hover  span.site-login
+{
+    color:#fff799;
+}
+.user-info.hover a.link-666
+{
+    background: url(../images/qqloginhover.png) no-repeat;
+    color:#fff799;
+}
+.user-info a.link-666
+{
+    background: url(../images/qqlogin.png) no-repeat;
+    color:#fff;
+}
+.user-wrapper .user-info dt.user-icon {
+    background-color: #30a6f5;
+    width: 34px;
+    height: 34px;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-right: 12px;
+}
+.user-wrapper dl dt.user-icon em {
+    display: inline-block;
+    background: url("../images/user.png") no-repeat center;
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    margin: 5px 0 0 5px;
+}
+.user-wrapper dl dt.info-icon,
+.user-wrapper dl dt.out-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 17px;
+    margin-right: 10px;
+    position: relative;
+}
+.wait-read {
+    position: absolute;
+    top: -6px;
+    left: 9px;
+    width: 18px;
+    height: 18px;
+    line-height: 1.8;
+    cursor: pointer;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    background-color: #ff6060;
+}
+.user-wrapper dl dt.info-icon {
+    background: url("../images/news.png") no-repeat center;
+}
+.user-wrapper dl dt.out-icon {
+    background: url("../images/exit.png") no-repeat center;
+}
+.user-wrapper dl i.questions-icon {
+    background: url("../images/home24.png") no-repeat center;
+    width: 24px;
+    height: 20px;
+}
+.user-wrapper dl dt i.icon {
+    margin: -3px 10px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.my-question .box:hover {
+    color: #fff799;
+}
+.user-info.hover .info-icon {
+    background: url("../images/news1.png") no-repeat center;
+}
+.user-info.hover .out-icon {
+    background: url("../images/exit1.png") no-repeat center;
+}
+.user-info.hover i.questions-icon {
+    background: url("../images/home24-hover.png") no-repeat center;
+}
+.user-info.hover .user-name {
+    color: #fff799;
+}
+.redbcg {
+    background:#fff9f0 !important;
+}
+.nav-header {
+    background-color:#F7F8F8;
+    font-size:14px;
+}
+.nav-header .nav-wrapper {
+    color: #30a6f5;
+}
+.nav-header .nav-wrapper .hd-title {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 80px;
+    *margin-left: 30px;
+}
+.defaultColor
+{
+    color: #333;
+}
+.defaultColor:hover
+{
+    color: #1ea0fa;
+}
+/* 头部style END */
+/*我的问卷 中间宽度 START
+*/
+.my-container {
+    width: 964px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1280px) {
+    .my-container {
+        width: 1160px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .my-container {
+        width: 1246px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .my-container {
+        width: 1480px;
+    }
+}
+
+/*
+  我的问卷 中间宽度 END
+*/
+
+.main-wrapper .select-box .selectLf-wrapper {
+    width: 210px;
+}
+@media (min-width: 1366px) {
+    .main-wrapper .select-box .selectLf-wrapper {
+        width: 316px;
+    }
+}
+.main-wrapper .select-box .selectRf-wrapper {
+    width: 754px;
+}
+@media (min-width: 1366px) {
+    .main-wrapper .select-box .selectRf-wrapper {
+        width: 990px;
+    }
+}

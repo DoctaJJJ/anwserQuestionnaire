@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-table/css/bootstrap-table.css">
+
+    <link rel="stylesheet" href="../css/wjxmaster.css">
+    <link rel="stylesheet" href="../css/myquestionnaires.css">
+
+    <script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugins/bootstrap-table/js/bootstrap-table.js"></script>
+    <script src="../plugins/bootstrap-table/js/bootstrap-table-zh-CN.js"></script>
+    <script src="../plugins/layer/layer.js"></script>
+    <script src="../plugins/cookie/jquery.cookie.js"></script>
+    <script src="../common/common.js"></script>
+    <script src="answerQuestionJs/userManage.js"></script>
+    <style>
+        .create-btn {
+            font-size: 16px;
+            width: 120px;
+            height: 36px;
+            margin-right: 10px;
+            line-height: 2;
+            border-radius: 100px;
+            border-color: #fa911e;
+            background-color: #fa911e;
+        }
+
+        .create-icon {
+            width: 15px;
+            height: 15px;
+            margin-right: 6px;
+            margin-top: -2px;
+            background: url(../images/create_15.png) no-repeat center;
+        }
+
+        .create-search {
+            position: relative;
+        }
+
+        .create-btn:hover {
+            background-color: #f08200;
+            border-color: #f08200;
+        }
+
+        .search-icon:hover {
+            background: url(../images/search1.png) no-repeat center;
+        }
+
+        .create-search input {
+            width: 300px;
+            height: 36px;
+            line-height: 1.6;
+            /* padding-left: 16px; */
+            padding: 8px 0 8px 16px;
+            font-size: 12px;
+            color: #999;
+            border-radius: 100px;
+            border: 1px solid #ccc;
+        }
+
+        .create-search .search-icon {
+            position: absolute;
+            top: 8px;
+            right: 11px;
+            width: 25px;
+            height: 20px;
+            margin: 0;
+            border: none;
+            cursor: pointer;
+            background: url(../images/search-gray.png) no-repeat center;
+        }
+
+        .survey-create {
+            position: relative;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            z-index: 200;
+        }
+
+        .survey__folder {
+            position: relative;
+            margin: 20px 0;
+            padding-top: 14px;
+            border-top: 2px solid #f5f7fa;
+        }
+
+        .my-btn-g {
+            font-size: 14px;
+            height: 30px;
+            border-radius: 3px;
+        }
+
+        .my-h4-g {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 27px;
+        }
+
+        /*以下是表格样式*/
+        .bootstrap-table{
+            margin: 0 50px;
+        }
+
+        .btn-default-g {
+            color: #fff;
+            background-color: #1ea0fa;
+            border-color: #1ea0fa;
+            height: 34px;
+            width: 54px;
+            font-size: 14px;
+        }
+
+        .btn-danger-g{
+            color: #fff;
+            background-color: #d9534f;
+            border-color: #d9534f;
+            height: 34px;
+            width: 54px;
+            font-size: 14px;
+        }
+
+        .btn-success-g{
+            color: #fff;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+            height: 34px;
+            width: 54px;
+            font-size: 14px;
+        }
+
+        .btn.focus, .btn:focus, .btn:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .fixed-table-pagination .pagination-info {
+            line-height: 34px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        .page-list{
+            font-size: 14px;
+        }
+
+        .fixed-table-pagination .btn-group {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .btn-group .btn-default{
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+
+        .search-icon:hover {
+            background: url(../images/search1.png) no-repeat center;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+<div class="header">
+
+</div>
+
+
+
+<div class="content-wrapper" style="border-top: 1px solid rgb(228, 228, 228); min-height: 266px;position:relative;margin:0 auto -50px;padding:0;width:100%;min-height:100%;height:auto!important;background:#fff;padding-bottom:50px">
+    <section class="content">
+        <div id="ajax-content">
+            <div class="projectManage">
+                <div class="surveyHeader">
+
+                </div>
+                <div class="surveySection">
+
+
+                    <div id="ctl01_ContentPlaceHolder1_searchPapaer" class="survey-create clearfix">
+
+                        <div class="create-add pull-left">
+
+                            <a href="javascript:void(0)" title="创建新用户"
+                               class="btn btn-default btn-lg pull-left create-btn" onclick="openCreateUserPage('','创建')">
+                                <i class="icon create-icon"></i>创建用户</a>
+                            <a href="javascript:void(0)" title="创建新用户"
+                               class="btn btn-default btn-lg pull-left create-btn" onclick="">
+                                批量导入
+                            </a>
+                            <a href="javascript:void(0)" title="创建新用户"
+                               class="btn btn-default btn-lg pull-left create-btn" onclick="">
+                                导出Excel
+                            </a>
+                            <div id="ctl01_ContentPlaceHolder1_divInfo" class="create-search pull-left"
+                                 style="margin-right:10px;">
+                                <input name="ctl01$ContentPlaceHolder1$txtName" type="text" placeholder="请输入用户名进行搜索..."
+                                       id="keyWord" class="serarchbox"
+                                       onfocus="if(placeholder=='请输入用户名进行搜索...'){placeholder='';}"
+                                       onblur="if(placeholder==''){placeholder='请输入用户名进行搜索...';}">
+
+                                <div class="icon search-icon buttonboder" id="userManager" onclick="getUserList()"></div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--<div id="ctl01_ContentPlaceHolder1_surveyfolder" class="survey__folder"></div>-->
+
+
+
+                    <table id="userTable" style="text-align:  center;font-size: 14px;margin: auto;word-wrap:break-word; word-break:break-all" ></table>
+
+
+                    <table class="questionnaire_tableAll"></table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div id="ctl01_footlink" class="my-footer MP-footer">
+
+    <div id="ctl01_divWjxFooter">
+        <i class="log-dec">Copyright &copy; 沈阳哲航信息科技有限公司</i><!-- 问卷星底部 -->
+    </div>
+</div>
+
+
+</body>
+
+<script>
+</script>
+
+</html>

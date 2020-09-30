@@ -1,0 +1,435 @@
+/* æ–‡ä»¶å¤¹è®¾ç½® START */
+/* æ–‡ä»¶å¤¹ä¸Žç»‘å®šé—®å· START */
+.folder__frame-pop {
+    position: relative;
+    width: 260px;
+    height: 166px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.folder__limit-box {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+}
+.folder__limit-box .drop-switch {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    *height: 34px;
+    line-height: 1;
+    cursor: pointer;
+    border: 1px solid #d7d8d9;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+}
+.folder__limit-box .drop-switch em {
+    height: 0;
+    color: #404142;
+    border-top: 6px solid #939596;
+    border-right: 4px solid #fff;
+    border-left: 4px solid #FFF;
+    border-bottom: 4px solid #fff;
+    position: absolute;
+    top: 15px;
+    right: 13px;
+}
+.folder__limit-box .drop-wrap {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    width: 260px;
+    *width: 244px;
+    max-height: 190px;
+    height: 190px;
+    overflow-y: auto;
+    padding: 10px 0 10px 14px;;
+    border-radius: 4px;
+    border: 1px solid #d7d8d9;
+    background-color: #fff;
+}
+.folder__limit-box .drop-wrap .folderThing {
+    position: relative;
+    height: 30px;
+    line-height: 2.3;
+    font-size: 12px;
+    color: #666;
+    padding: 0 14px;
+    margin-bottom: 10px;
+    margin-right: 6px;;
+    border-radius: 6px;
+    background-color: #f2f5f7;
+}
+.folder__limit-box .word__limit {
+    position: absolute;
+    top: 0;
+    right: 52px;
+    font-size: 12px;
+    color: #999;
+    line-height: 3;
+}
+.folder__limit-box .word__limit .curr-char {
+    color: #1ea0fa;
+}
+.folder__limit-box input[type="text"] {
+    width: 224px;
+    *width: 165px;
+    height: 36px;
+    *height: 22px;
+    padding: 6px 40px 6px 16px;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #d7d8d9;
+    background-color: #f7f8f9
+}
+.folder__frame-pop .btn__createFolder {
+    width: 120px;
+    height: 30px;
+    color: #fff;
+    line-height: 2;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+
+.fod-set__wrapper {
+
+    width: 730px;
+    height: 602px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.fod-set__sched {
+    overflow: hidden;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: #f2f4f5;
+}
+.fod-set__sched a {
+    float: left;
+    font-size: 16px;
+    width: 140px;
+    height: 40px;
+    line-height: 2.5;
+    color: #999;
+    text-align: center;
+    cursor: pointer;
+}
+.fod-set__sched a.clicked {
+    color: #1ea0fa;
+    background-color: #e1e3e5;
+}
+.fod-set__inner {
+    padding: 0 26px;
+}
+.fod-set__btn {
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 14px;
+}
+.fod-set__error {
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+/* æ–‡ä»¶å¤¹ä¸Žç»‘å®šé—®å· END */
+
+/* æ–‡ä»¶å¤¹ START */
+.fod-set__wrapper .fillet-content {
+    width: 100%;
+}
+.fod-set__wrapper .fillet-content .fillet-header,
+.fod-set__wrapper .fillet-content .fillet-footer {
+    *padding: 0;
+    height: 38px;
+    background-color: #fff;
+}
+.fod-set__wrapper .fillet-content .fillet-footer:hover {
+    background-color: #fafafa;
+}
+.fod-set__bread-crumbs {
+    font-size: 14px;
+    padding: 0 24px;
+    line-height: 2.6;
+}
+.fod-set__add-dim,
+.fod-set__add-dim--sub {
+    position: relative;
+    height: 100%;
+    line-height: 2.5;
+    cursor: pointer;
+}
+.fod-set__add-dim {
+    line-height: 3;
+}
+.fod-set__icon-add,
+.fod-set__icon-add--sub {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    margin-top: -3px;
+}
+.fod-set__icon-add {
+    background: url("/images/dim-set/increase.png") no-repeat center;
+}
+.fod-set__icon-add--sub {
+    width: 12px;
+    height: 12px;
+    background: url("/images/dim-set/increase-gray.png") no-repeat center;
+    background-size: cover;
+}
+.fod-set__icon-modify {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+    background: url("/images/dim-set/modify.png") no-repeat center;
+}
+.fod-set__icon-delete {
+    width: 14px;
+    height: 14px;
+    margin-right: 0;
+    cursor: pointer;
+    background: url("/images/dim-set/delete.png") no-repeat center;
+}
+.fod-set__wrapper .overall__table {
+    margin-bottom: 16px;
+}
+.fod-set__wrapper .overall__table th {
+    font-size: 12px;
+}
+.fod-set__btn-bind {
+    width: 100px;
+    *width: 74px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 30px;
+}
+/* æ–‡ä»¶å¤¹ END */
+
+/* æ–‡ä»¶å¤¹æƒé‡ START */
+.fod-set__weights-box {
+    margin-top: 30px;
+}
+.title__style-1 {
+    position: relative;
+    line-height: 1;
+    padding-left: 10px;
+}
+.title__style-1:after,
+.title__style-1 .after {
+    content: "";
+    after: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #30a6f5;
+    border-radius: 2px;
+}
+.fod-set__weights-list {
+    margin-bottom: 24px;
+}
+.fod-set__weights-list li {
+    overflow: hidden;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.fod-set__weights-list li:first-child {
+    margin-left: 0;
+}
+.fod-set__weights-list li:nth-child(3n + 1) {
+    margin-left: 0;
+}
+.fod-set__weights-list .section {
+    width: 105px;
+    height: 40px;
+    *height: 18px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    padding: 10px 5px;
+    border: 1px solid #cacbcc;
+    border-right: none;
+}
+.fod-set__weights-list .section input {
+    border: none;
+    width: 30px;
+    color: #808080;
+    text-align:	center;
+    background-color: #f7f8f9;
+}
+.fod-set__weights-list .section:first-child {
+    *width: 94px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.fod-set__weights-list .section + .section {
+    *width: 93px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #f7f8f9;
+    border-right: 1px solid #cacbcc;
+}
+.fod-set__weights-list .section + .section.focus {
+    border-color: #1ea0fa;
+}
+.fod-set__weights-prompt {
+    font-size: 14px;
+    color: #808080;
+    height: 40px;
+    line-height: 40px;
+    padding:  0 20px;
+    margin-bottom: 30px;
+    border: 1px dashed #e6e6e6;
+    border-radius: 6px;
+    background-color: #f7f8f9;
+}
+.fod-set__weights-btn .btn {
+    width: 70px;
+    margin: 0 3px;
+    border-radius: 6px;
+}
+.ui-select-dropdown {
+    display: none;
+}
+/* æ–‡ä»¶å¤¹æƒé‡ END */
+
+
+/* ç»‘å®šæƒ…å†µ START */
+.fod-set__situation-title {
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.fod-set__situation-box .fillet-box tr td {
+    padding: 5px 0;
+}
+.fod-set__situation-box .fillet-box tr td:first-child + td + td {
+    position: relative;
+    padding: 0;
+}
+.fod-set__situation-box .fillet-box tr td:first-child + td + td:hover {
+    background-color: #f7f9fa;
+}
+.fod-set__situation-box .fillet-box tr td .num {
+    width: 92%;
+    line-height: 1.8;
+    display: inline-block;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.fod-set__situation-box .fillet-box tr td .null {
+    color: #999;
+}
+.fod-set__situation-box .fod-set__icon-modify {
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 20% 0;
+}
+/* ç»‘å®šæƒ…å†µ END */
+
+/* ç»‘å®šé—®å· START */
+.fod-set__bind-title {
+    line-height: 2;
+    margin-bottom: 30px;
+}
+.fod-set__bind-title .prompt {
+    color: #666;
+}
+.fod-set__bind-title .fod-set__choose {
+    margin-left: 14px;
+    margin-right: 12px;
+}
+.fod-set__chosen {
+    color: #666;
+}
+.fod-set__btn-save {
+    margin-top: 13px;
+}
+.fod-set__margin--15 {
+    margin-bottom: 15px;
+}
+.fod-set__bind-box tr.fod-set__disabled td,
+.fod-set__bind-box tr.fod-set__disabled td span {
+    color: #b3b3b3;
+}
+/* ç»‘å®šé—®å· END */
+
+/* æ–‡ä»¶å¤¹è®¾ç½® END */
+
+
+
+/* beautify input START */
+/* --------------------  Checkboxes and Radio inputs  -------------------- */
+.wjx__templet__beautifyInput input[type="radio"],
+.wjx__templet__beautifyInput input[type="checkbox"] {
+    position: absolute;
+    left: -999em;
+}
+.wjx__templet__beautifyInput label:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 0.16em;
+    left: -2px;
+    width: 16px;
+    height: 16px;
+    background-image: url("/images/dim-set/radio-check.png");
+}
+.wjx__templet__beautifyInput input[type="checkbox"] + label:before {
+    background-position: 0 -17px;
+}
+.wjx__templet__beautifyInput input[type="checkbox"]:checked + label:before {
+    background-position: 0 0;
+}
+.wjx__templet__beautifyInput input[type="checkbox"]:disabled + label:before {
+    background-position: 0 -34px;
+}
+.wjx__templet__beautifyInput input[type="radio"] + label:before {
+    background-position: -19px -17px;
+}
+.wjx__templet__beautifyInput input[type="radio"]:checked + label:before {
+    background-position: -19px 0;
+}
+/* Remove the custom styling for IE 7-8 */
+
+.ie8 .wjx__templet__beautifyInput label:before {
+    display: none;
+    content: none;
+}
+.ie8 .wjx__templet__beautifyInput input[type="checkbox"],
+.ie8 .wjx__templet__beautifyInput input[type="radio"],
+.ie7 .wjx__templet__beautifyInput input[type="checkbox"],
+.ie7 .wjx__templet__beautifyInput input[type="radio"] {
+    position: static;
+    left: 0;
+}
+.ie8 .wjx__templet__beautifyInput input[type="checkbox"],
+.ie8 .wjx__templet__beautifyInput input[type="radio"] {
+    position: relative;
+    top: 5px;
+    margin-right: 0.5em;
+}
+.wjx__templet__beautifyInput input[type="text"]:focus,
+.wjx__templet__beautifyInput textarea:focus {
+    border-color: #000;
+}
+/* beautify input END */
+
+
+
+
