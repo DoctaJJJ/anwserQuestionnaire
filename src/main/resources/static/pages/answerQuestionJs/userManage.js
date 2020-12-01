@@ -113,7 +113,7 @@ function TableInit() {
                             dataNewObj.username = userInfo[i].username;
                             dataNewObj.password = userInfo[i].password;
                             dataNewObj.startTime = userInfo[i].startTime.replace(/-/g,'/');
-                            dataNewObj.endTime = userInfo[i].endTime.replace(/-/g,'/');
+                            dataNewObj.endTime = userInfo[i].stopTime.replace(/-/g,'/');
                             dataNewObj.status = userInfo[i].status;
                             NewData.push(dataNewObj);
                         }
@@ -139,7 +139,7 @@ function TableInit() {
         var temp = {   //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
             pageNum: params.pageNumber,
             pageSize: params.pageSize,
-            username: userName
+            userName: userName
         };
         return JSON.stringify(temp);
     }
