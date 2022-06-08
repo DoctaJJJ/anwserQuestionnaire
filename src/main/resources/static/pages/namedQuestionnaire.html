@@ -1,0 +1,105 @@
+<html xmlns="http://www.w3.org/1999/xhtml" class=" js no-touch csstransforms3d csstransitions">
+<head id="ctl01_Head1">
+    <title>创建问卷</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta id="ctl01_keywords" name="keywords">
+
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+    <link id="ctl01_cssdefault" rel="stylesheet" type="text/css" href="../css/default.css?v=4">
+    <link id="ctl01_cssmaster" rel="stylesheet" type="text/css" href="../css/wjxmaster.css?v=4">
+    <link rel="stylesheet" type="text/css" href="../css/createblank.css?v=6">
+
+    <style>
+        .headerFixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+<div id="BS">
+    <div class="header">
+
+    </div>
+
+    <div class="BS-box" style="text-align:left;">
+        <div id="ctl01_ContentPlaceHolder1_divCss">
+        </div>
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                   value="/wEPDwULLTE0MTk5Nzk0NTEPZBYCZg9kFg4CAg8WAh4HVmlzaWJsZWhkAgMPFgIfAGhkAgQPFgIfAGdkAgUPDxYCHgRUZXh0BQsxNTg0MDA2ODk3M2RkAgYPFgIfAGhkAggPFgIfAGhkAg4PZBYCAgMPZBYEZg9kFgICAQ8WAh4JaW5uZXJodG1sBRLliJvlu7rosIPmn6Xpl67ljbdkAgIPFgIfAGhkZPzpe+ix9xRWo5mt7n30COIAn6PQ">
+        </div>
+        <div>
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E6EA5056">
+        </div>
+        <div id="ctl01_ContentPlaceHolder1_divCreate" class="nav-header">
+            <div class="container">
+                <div class="nav-wrapper clearfix">
+                    <h1 id="ctl01_ContentPlaceHolder1_spanTitle" class="hd-title pull-left">创建调查问卷</h1>
+                </div>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <div class="create-box">
+                <div class="create__fill">
+                    <div class="fill__name-box clearfix">
+                        <label class="pull-left" id="spanName" style="position: relative;"><span style="color:red;left: 65px;top: 5px;position: absolute;">*</span>调查名称：</label>
+                        <div class="pull-left">
+                            <input type="text" id="questionName" class="pull-left"
+                                   style="line-height:50px; margin-bottom: 14px;">
+                        </div>
+                    </div>
+                    <div class="fill__name-box clearfix" style="margin-top: 20px;">
+                        <label class="pull-left" id="spanContent" style="position: relative;"><span style="color:red;left: 65px;top: 5px;position: absolute;">*</span>调查说明：</label>
+                        <div class="pull-left">
+                            <textarea id="questionContent" name="ctl01$ContentPlaceHolder1$txtQName" type="text" class="pull-left describe" style="height: 100px;width: 650px;border-radius: 5px;margin-left: 10px;font-size: 16px;line-height: 40px;padding-left: 10px"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="fill__name-box clearfix" style="margin-top: 20px;">
+                        <label style="position: relative;" class="pull-left" id="endTime"><span style="color:red;left: 65px;top: 5px;position: absolute;">*</span>起止时间：</label>
+                        <div class="pull-left">
+                            <input name="ctl01$ContentPlaceHolder1$txtQName" type="text" id="config-demo" class="pull-left form-control" style="width:650px;line-height:50px; margin-bottom: 14px;">
+                        </div>
+                    </div>
+
+                    <div class="btn-block" style="position:relative;">
+                        <table align="center">
+                            <tbody>
+                            <tr>
+                                <td valign="top">
+                                    <div id="spanCode" style="float: left; display: inline; margin-top: 60px">
+                                    </div>
+                                    &nbsp; &nbsp; &nbsp;
+                                </td>
+                                <td valign="middle" style="padding-bottom: 30px;">
+                                    <input type="submit" value="立即创建" onclick="quickCreate();" id="quickCreate"
+                                           class="btn btn-default create__btn-new" style="width:200px;">
+                                    <div style="float: right; display: inline; margin-top: 58px; margin-left: 30px;">
+                                        <span id="ctl01_ContentPlaceHolder1_lblMsg" style="color:Red;"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+<script src="../plugins/cookie/jquery.cookie.js"></script>
+<script src="../plugins/daterangepicker/moment.min.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<script src="../plugins/layer/layer.js"></script>
+<script src="../common/common.js"></script>
+<script src="answerQuestionJs/namedQuestionnnaire.js"></script>
+</body>
+</html>

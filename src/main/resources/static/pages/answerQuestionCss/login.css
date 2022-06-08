@@ -29,3 +29,17 @@
     border: none !important;
     cursor: pointer;
 }
+
+.error-msg-box {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    padding: 0 50px;
+    background-color: #FDF1F0;
+    color: #333333;
+    font-size: 13px;
+    line-height: 40px;
+    text-align: center;
+}

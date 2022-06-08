@@ -58,9 +58,15 @@ commonDS:
 spring:
   profiles: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/questionnaire?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    #连接mysql5数据库
+    # url: jdbc:mysql://39.99.231.41:3306/questionnaire?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    # username: lying
+    # password: lying
+    # driver-class-name: com.mysql.jdbc.Driver
+    #连接mysql8数据库
+    url: jdbc:mysql://127.0.0.1:3206/questionnaire?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: root
-    driver-class-name: com.mysql.jdbc.Driver
+    password: jjsc172412
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 

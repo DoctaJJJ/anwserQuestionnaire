@@ -5,7 +5,9 @@
 // var httpRequestUrl = "http://114.115.132.86:8080/questionSurvey";
 
 
-var httpRequestUrl = "http://localhost:8085";
+var httpRequestUrl = "http://127.0.0.1:8085";
+//var httpRequestUrl = "http://10.211.55.5:8085";
+//var httpRequestUrl = "http://39.99.231.41:8088/";
 /**
  * 加载公共的头
  */
@@ -31,12 +33,7 @@ function header() {
         '                    <dd class="spinner-list">\n' +
         '                        <a href="javascript:void(0)" class="user-name">' +
         '                           <span id="ctl01_lblUserName"style="text-align:center">admin</span>' +
-        '                           <span class="caret"></span>' +
-        '                        </a>\n' +
-        '                        <ul style="width:100px" id="userList">\n' +
-        '                            <span class="caret-inverted"></span>\n' +
-        '                            <li><a href="userManage.html">用户管理</a></li>\n' +
-        '                        </ul>\n' +
+        '                        </a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="user-name" href="userManage.html" id="gotoUserManage">用户管理</a>\n' +
         '                    </dd>\n' +
         '                </dl>\n' +
         '                <dl id="ctl01_hrefWjxout" class="user-info pull-left IE-8">\n' +

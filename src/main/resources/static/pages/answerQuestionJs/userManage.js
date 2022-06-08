@@ -96,7 +96,10 @@ function TableInit() {
             responseHandler: function (res) {
                 //console.log(res);
                 if(res.code == "666"){
-                    var userInfo = res.data.list;
+                    var temp=JSON.stringify(res.data.list);
+                    var userInfo = JSON.parse(temp);
+                    // var  userInfo="<%TurnToJson.Json()%>";
+                    // var userInfo=JSON.parse('[{"password":"1","startTime":"2022-05-12T10:09:28","id":"1","endTime":"2022-05-12T10:09:30","username":"aa","status":"1"},{"password":"123","startTime":"2022-05-12T12:10:37","id":"290e08f3ea154e33ad56a18171642db1","endTime":"2022-06-11T12:10:37","username":"aaa","status":"1"},{"password":"1","startTime":"2018-10-24T09:49:00","id":"8ceeee2995f3459ba1955f85245dc7a5","endTime":"2025-11-24T09:49:00","username":"admin","status":"1"},{"password":"aa","startTime":"2022-05-16T12:01:54","id":"a6f15c3be07f42e5965bec199f7ebbe6","endTime":"2022-06-15T12:01:54","username":"aaaaa","status":"1"}]');
                     var NewData = [];
                     if (userInfo.length) {
                         for (var i = 0; i < userInfo.length; i++) {
@@ -112,15 +115,15 @@ function TableInit() {
                             dataNewObj.id = userInfo[i].id;
                             dataNewObj.username = userInfo[i].username;
                             dataNewObj.password = userInfo[i].password;
-                            dataNewObj.startTime = userInfo[i].startTime.replace(/-/g,'/');
-                            dataNewObj.endTime = userInfo[i].stopTime.replace(/-/g,'/');
+                            dataNewObj.startTime = userInfo[i].startTime;
+                            dataNewObj.endTime = userInfo[i].endTime;
                             dataNewObj.status = userInfo[i].status;
                             NewData.push(dataNewObj);
                         }
-                        //console.log(NewData)
+                        console.log(NewData)
                     }
                     var data = {
-                        total: res.data.total,
+                        total: res.data.total,//需要更改
                         rows: NewData
                     };
 

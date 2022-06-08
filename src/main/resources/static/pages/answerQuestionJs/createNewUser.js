@@ -8,7 +8,7 @@ $(function () {
     header();
     $("#ctl01_lblUserName").text(getCookie('userName'));
     createTimePicker();
-    getUserRole();
+    //getUserRole();
     changeTitle();
 });
 
@@ -161,7 +161,7 @@ function changeTitle() {
 
 
 // 获取所有用户角色
-function getUserRole() {
+/* function getUserRole() {
     var url = '/admin/queryRoleInfo';
     $.ajax({
         "async": false,
@@ -182,7 +182,7 @@ function getUserRole() {
             }
         }
     });
-}
+} */
 
 // 创建时间区域选择
 function createTimePicker() {

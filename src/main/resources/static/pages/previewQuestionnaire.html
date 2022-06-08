@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问卷预览</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/previewQuestionnaire.css">
+    <style>
+        .layui-layer-ico16, .layui-layer-loading {
+            width: 32px;
+            height: 32px;
+            background: url(../plugins/layer/theme/default/loading-2.gif) no-repeat;
+            text-align: center!important;
+        }
+    </style>
+</head>
+<body>
+<div class="div_header"></div>
+<div class="row questionnaire">
+    <div class="container-fluid">
+        <h3 class="col-xs-0 col-sm-2 col-md-2"></h3>
+        <h3 class="col-xs-12 col-sm-8 col-md-8"
+            style="text-align: center;font-weight: bold;color:#1ea0fa;">
+           <span class="questionnaireTittle" id="questionnaireTittle1">
+
+           </span>
+            <br>
+            <span class="questionnaireTittle" id="questionnaireTittle2">
+               <!--（在校生问卷）-->
+           </span>
+            <span style="position: absolute; right: -19%;" id="qrcordStyle">
+                <div id="qrcode" class="qrcode">
+                </div>
+           </span>
+        </h3>
+        <h3 class="col-xs-0 col-sm-2 col-md-2"></h3>
+    </div>
+    <div class="questionTips" style="margin-top:-20px;">
+        <p class="officialTips">
+           </p>
+    </div>
+    <div class="col-xs-12 col-sm-6 container-fluidT" id="jump">
+
+    </div>
+    <div class="clear"></div>
+    <div class="lineBottom"></div>
+</div>
+</body>
+<script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+<script src="../plugins/jquery.qrcode.min.js"></script>
+<script src="http://pv.sohu.com/cityjson"></script>
+<script src="../plugins/cookie/jquery.cookie.js"></script>
+<script src="../plugins/layer/layer.js"></script>
+<script src="../common/common.js"></script>
+<script src="answerQuestionJs/previewQuestionnaire.js"></script>
+</html>

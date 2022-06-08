@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" class=" js no-touch csstransforms3d csstransitions">
+<head id="ctl01_Head1">
+    <title>历史问卷库</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta id="ctl01_keywords" name="keywords">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+    <link id="ctl01_cssdefault" rel="stylesheet" type="text/css" href="../css/default.css?v=4">
+    <link id="ctl01_quetsioncss" rel="stylesheet" type="text/css" href="../css/myquestionnaires.css?v=11">
+    <link id="ctl01_cssmaster" rel="stylesheet" type="text/css" href="../css/wjxmaster.css?v=4">
+
+    <script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../plugins/daterangepicker/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../plugins/layer/layer.js"></script>
+    <script src="../plugins/cookie/jquery.cookie.js"></script>
+    <script src="../common/common.js"></script>
+    <script src="answerQuestionJs/historyQuestionnaire.js"></script>
+    <style>
+        .headerFixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+<div id="BS">
+
+    <!--修改结束时间-->
+    <div class="modal fade" id="recoverRunModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"  data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border-radius: 5px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <span aria-hidden="true">&times;</span></button>
+                    </button>
+                    <h3 class="modal-title" id="addPointLabel">修改结束时间</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="messageText" class="control-label">结束时间:</label>
+                        <input type="text" id="endTimeModal" class="form-control" id="messageText">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="recoverRunBtn()">保存</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+    <div class="header">
+
+    </div>
+
+    <div class="BS-box" style="text-align:left;margin-top: 35px">
+
+
+        <link rel="stylesheet" type="text/css" href="../css/deletedquestionnaire.css">
+            <div>
+                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                       value="0921Z0fxw2qGVh++bTZne5Liuhc+3SaVpe6zvYX/Ks3HyZNmPKNNnWCJBC6n0N/RAoFrQQXW5RgiYkdUjd8UEKGjRImwdMYKuZ9VknLt6DvJw6xMtmOguppT68OGFS9xiVkT4s+P1898bm/BUe6ZhZsadqY5l8bUlgnW1h9busNOHXrX+O/ZoWNxD/lA4wMZbYv+UU2NviZg1kzhYO2yn+iXDoJzX52Sr10CSN+OLVEOoEb+feOzw/SHCUYoziNbJQmVWHNan1OBlVxweYrQTx0UTnR6hlRL9oWz9jvVoJ/X0StRpRpjAMUlbKL7TlLaYTyWb84+ZoJehWBYcTrldgvkKtDMOhliZ8MoQc3TSb93EDPsgJW62v+jzb2Kgc76BAIGD0RKUDNCFu4ns11Ba4fz3JvxxvZIiXIECnCYDu4AtDl5U06GmIVURxEfMa6G6e7OS/m5pXrlNvpErPlLvZpVQ9/fqzDhI61G0TWTVGpc72PpWYcRz1v6agShbuapy+dgyw1pgBEZTd+wydFsvWrJGuLx04RvIYgfi5CNc3dmvC1cUa00xx6EQiyhGbjWqwmMsiMVjUta7Li6oN5VyiEUfs1tlTzoiSHDIoM1CbegH7QTL7Sb7fHJVU1KekjTiIQrGJ7pZoTLUlokWc7aCCWXyH91vff2wxSeekKbxnHH18grAu1F6dKnOXH7f00R2DYS+aHQcJmTmyVXYNXVh7RO8uARazCdhm7vX6b1G3NA7OCaOTBeZXapx20hRzmI0XxbuO4rrVeN3IVezB0hN1PMxJ12IwclCYtNMmmpTh1CwmHpwow+jzoBYwtahdBbzkCmza+8y1L3fJUaF2wHKGomkdtN/Z14FNh+l48OH4SfBB7wRdnfLPrvOkoJJCFiAOVXqkXbZnKUI74IDWmKpo7F/3WBIPy0IfUJ8L754o+iy3h1PQ19u6jPLYFSMMft4QyzkEUwfF1zTxJcr4qTQqoHocXluqxgVc1m3KlTjGCfVyIJP0yTLBj46LOIn+R3a2Se6Ab6WZZ3Lzsk9GG9njiRaMleGBSeUiB93wNv7mP5Rnxj2EeWJIBKe0BQGBXeveipiEejTuFHmYHzGm2XHEfU3IrGoiX+VsISTtp8pyjWyfj/ob35SNfw8A4=">
+            </div>
+
+            <div>
+
+                <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F8AFB7A4">
+                <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+            </div>
+
+            <div class="main-wrapper">
+                <div id="main" class="fillet-box">
+                    <div style="height:40px;line-height:40px;">
+                        <!--<div class="fillet-tit pull-left">-->
+                        <div class="survey-wrapper clearfix">
+                            <!--<div class="survey-left pull-left" style="">-->
+                            <div id="ctl01_ContentPlaceHolder1_searchPapaer" class="survey-create clearfix">
+                                <!--<div class="create-add pull-left">-->
+                                <div id="ctl01_ContentPlaceHolder1_divInfo" class="create-search pull-left"
+                                     style="margin-right:10px;">
+                                    <input name="ctl01$ContentPlaceHolder1$txtName" type="text" placeholder="请输入问卷名称进行搜索..."
+                                           id="keyWord" class="serarchbox"
+                                           onfocus="if(placeholder=='请输入问卷名称进行搜索...'){placeholder='';}"
+                                           onblur="if(placeholder==''){placeholder='请输入问卷名称进行搜索...';}"
+                                    >
+
+                                    <div class="icon search-icon buttonboder" onclick="getHistoryQuest()"></div>
+
+                                </div>
+                                <!--<input type="submit" name="ctl01$ContentPlaceHolder1$btnDelete" value="清空历史问卷"-->
+                                       <!--onclick="return confirm('彻底删除将不可再恢复，确定吗？');"-->
+                                       <!--id="ctl01_ContentPlaceHolder1_btnDelete"-->
+                                       <!--title="清空历史问卷" class="btn btn-default btn-lg finish-btn pull-right"-->
+                                       <!--style="margin-top: 5px">-->
+                            </div>
+                            <!--</div>-->
+
+                            <!--<h4 class="give"><i class="icon important-icon"></i>如果您想释放上传文件题的空间，请点击“清空数据”，数据清空后将无法恢复，请谨慎操作！-->
+                            <!--</h4>-->
+                            <!--</div>-->
+
+                        </div>
+                        <div>
+                            <table class="fillet-content" border="0" id="ctl01_ContentPlaceHolder1_grvwActivity"
+                                   style="width:964px;">
+                                <!--<tbody>-->
+                                <thead>
+                                <tr align="center" valign="middle"
+                                    style="color:Gray;background-color:#F7F8F9;border-color:#D7D8D9;border-width:1px;border-style:Solid;font-size:14px;height:36px;">
+                                    <th style="text-align:center;" scope="col">问卷名</th>
+                                    <th style="text-align:center;" scope="col">所属项目名</th>
+                                    <th style="text-align:center;" scope="col">结束时间</th>
+                                    <th style="text-align:center;" scope="col">答卷数</th>
+                                    <th scope="col" style="text-align:center;width: 50px;">预览</th>
+                                    <th style="text-align:center;" scope="col">恢复运行</th>
+                                    <th style="text-align:center;" scope="col">彻底删除</th>
+                                </tr>
+                                </thead>
+                                <tbody id="historyList">
+                                <!--<tr  style="color:#333333;background-color:White;font-size:14px;height:36px;">-->
+                                    <!--<td align="center" style="width:519px;">-->
+                                        <!--<span>高校学生消费情况调查</span>-->
+                                    <!--</td>-->
+                                    <!--<td align="center" style="width:122px;">-->
+                                        <!--<span>2018年7月16日</span>-->
+                                    <!--</td>-->
+                                    <!--<td align="center" style="width:82px;">0</td>-->
+                                    <!--<td align="center">-->
+                                        <!--<a id="btnSend" href="previewQuestionnaire.html">查看</a>-->
+                                    <!--</td>-->
+                                    <!--<td align="center">-->
+                                        <!--<img src="../images/run.gif" height="16" width="16"/>-->
+                                    <!--</td>-->
+                                    <!--<td align="center">-->
+                                        <!--<img src="../images/cross.gif" height="16" width="16"/>-->
+
+                                    <!--</td>-->
+
+                                <!--</tr>-->
+                                </tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="noHistoryQuest" style="display:none;height:36px;line-height:36px;background:#f7f8f9;border: 1px solid #d7d8d9; border-top:none;border-radius:0px 0px 6px 6px;">
+                            <h4 class="must">无历史问卷</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

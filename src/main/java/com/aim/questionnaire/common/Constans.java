@@ -66,6 +66,7 @@ public class Constans {
     public static final String LOGOUT_NO_MESSAGE="没有登录";
     public static final String LOGIN_USERNAME_MESSAGE="用户名不存在";
     public static final String LOGIN_PASSWORD_MESSAGE="密码不正确";
+    public static final String LOGIN_USERNAME_PASSWORD_MESSAGE="用户名或者密码错误";
 
     public static final String LOGOUT_PERMISSION_MESSAGE="没有权限";
 

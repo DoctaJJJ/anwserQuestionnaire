@@ -1,7 +1,5 @@
 package com.aim.questionnaire.beans;
 
-import lombok.Data;
-
 import java.io.Serializable;
 
 /**

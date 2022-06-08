@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta id="ctl01_keywords" name="keywords"/>
+    <title>编辑问卷</title>
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+    <link id="ctl01_cssdefault" rel="stylesheet" type="text/css" href="../css/default.css?v=4"/>
+    <link rel="stylesheet" href="../css/myquestionnaires.css">
+    <link id="ctl01_cssmaster" rel="stylesheet" type="text/css" href="../css/wjxmaster.css?v=4"/>
+    <link rel="stylesheet" type="text/css" href="../css/choosetype.css?v=4"/>
+    <link rel="stylesheet" href="../css/createblank.css">
+
+    <script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="../plugins/daterangepicker/moment.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../plugins/cookie/jquery.cookie.js"></script>
+    <script src="../plugins/layer/layer.js"></script>
+    <script src="../common/common.js"></script>
+    <script src="../js/zhezhao.js?v=3"></script>
+    <script src="../js/modernizr.js"></script>
+    <script src="../js/baidutg.js?v=3"></script>
+    <script src="answerQuestionJs/editQuestionnaire.js"></script>
+
+    <style>
+        .my-select{
+            margin-left: 10px;
+            width: 800px;
+            margin-top: 10px;
+            height: 50px;
+        }
+
+        .form-control{
+            border-color: #A9A9A9;
+        }
+
+        .form-control:focus {
+            border-color: #A9A9A9;
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    </style>
+
+</head>
+<body>
+<div class="header">
+
+</div>
+
+<div id="ctl01_ContentPlaceHolder1_divCreate" class="nav-header">
+    <div class="container" style="height: 70px;">
+        <div class="nav-wrapper clearfix">
+            <h1 id="ctl01_ContentPlaceHolder1_spanTitle" class="hd-title pull-left" style="line-height: 25px;">编辑问卷</h1>
+        </div>
+    </div>
+</div>
+
+<div class="main-wrapper">
+    <div class="create-box">
+        <div class="create__fill">
+            <div class="fill__name-box clearfix">
+                <label class="pull-left" id="spanName">问卷名称：</label>
+                <div class="pull-left">
+                    <input name="ctl01$ContentPlaceHolder1$txtQName" type="text" id="questionName" class="pull-left"
+                           style="line-height:50px; margin-bottom: 14px;">
+                </div>
+            </div>
+            <div class="fill__name-box clearfix">
+                <label class="pull-left" id="spanIntro">问卷描述：</label>
+                <div class="pull-left">
+                    <textarea id="questionContent" name="ctl01$ContentPlaceHolder1$txtQName" type="text" class="pull-left describe"style="height: 100px;width: 800px;border-radius: 5px;margin-left: 10px;font-size: 16px;line-height: 40px;padding-left: 10px;"></textarea>
+                </div>
+            </div>
+            <div class="fill__name-box clearfix">
+                <label class="pull-left" id="spanQuestType">调查类型：</label>
+                    <select class=" form-control selectpicker pull-left my-select" id="belongType" title="所属调查类型" data-first-option="false"
+                            data-live-search="true">
+                        <!--<option value="teacher">老师调查</option>-->
+                        <!--<option value="student">在校生调查</option>-->
+                        <!--<option value="graduate">毕业生调查</option>-->
+                        <!--<option value="company">企业调查</option>-->
+                    </select>
+                <div id="ifRemand" style="color: #ff0000;margin: 10px 210px 0;display: none" class=" pull-left">
+                    问卷已经发布，不可修改调查类型
+                </div>
+            </div>
+            <div class="fill__name-box clearfix">
+                <label class="pull-left" style="margin-top: 10px;" id="spanEndTime">起止时间：</label>
+                <div class="pull-left" style="margin-top: 15px;">
+                    <input name="ctl01$ContentPlaceHolder1$txtQName" type="text" id="questionStartEndTime"
+                           class="pull-left"
+                           style="line-height:50px; margin-bottom: 14px;">
+                </div>
+            </div>
+            <div class="btn-block" style="position:relative;">
+                <table align="center">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div id="spanCode" style="float: left; display: inline; margin-top: 60px">
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td valign="middle" style="padding-bottom: 30px;">
+                            <div type="" name="ctl01$ContentPlaceHolder1$lbtnNextStep" onclick="modifyQuest()"
+                                 id="ctl01_ContentPlaceHolder1_lbtnNextStep" class="btn btn-default create__btn-new"
+                                 style="width:200px;">
+                                保存修改
+                            </div>
+                            <div style="float: right; display: inline; margin-top: 58px; margin-left: 30px;">
+                                <span id="ctl01_ContentPlaceHolder1_lblMsg" style="color:Red;"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

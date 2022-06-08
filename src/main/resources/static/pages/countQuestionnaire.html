@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" style="" class=" js no-touch csstransforms3d csstransitions">
+<head id="ctl02_Head1"><title>
+    统计&amp;分析
+</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta id="ctl02_keywords" name="keywords" content="问卷星">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-table/css/bootstrap-table.css">
+    <link rel="stylesheet" type="text/css" href="../css/default.css?v=4">
+    <link rel="Stylesheet" type="text/css" href="../css/NewDefault.css?v=12">
+    <link rel="Stylesheet" type="text/css" href="../css/WjxDesign360.css?v=10">
+    <link rel="stylesheet" type="text/css" href="../css/selectpick.css">
+
+    <style>
+        .main-wrapper .survey-wrapper .survey-create .create-search input {
+            width: 300px;
+            height: 36px;
+            line-height: 1.6;
+            /*padding-left: 16px;*/
+            padding: 8px 0 8px 16px;
+            font-size: 12px;
+            color: #999;
+            border-radius: 100px;
+            border: 1px solid #ccc;
+            margin-left: -31px;
+        }
+
+        .main-wrapper .survey-wrapper .survey-create .create-search .search-icon {
+            /*position: absolute;*/
+            top: 8px;
+            right: 11px;
+            width: 25px;
+            height: 20px;
+            margin: -42px;
+            border: none;
+            cursor: pointer;
+            background: url(../images/search-gray.png) no-repeat center;
+        }
+        /*下拉样式*/
+        .selectpick-icon {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            vertical-align: middle;
+            border-top: 5px dashed;
+            border-top: 5px solid \9;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
+
+        select {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-color: #fff;
+            /*设置箭头*/
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAYAAAAGuM1UAAAAH0lEQVR42mNgoDnQ13f7TwiTpIkkm0hyHkl+YhhQAABcfyjsqSyTLgAAAABJRU5ErkJggg==") no-repeat scroll right center transparent;
+            padding-right: 4px;
+        }
+    </style>
+</head>
+<body class="fp-viewing">
+<div class="main-container">
+    <div class="nav-bar aside size30x30" id="leftlabel">
+        <div class="ui-sidebar">
+            <!--<a href="myQuestionnaires.html" class="return-wrapper">-->
+            <a href="javascript:void(0)" class="return-wrapper" onclick="window.opener=null;window.close()">
+                <em class="icon return-icon"></em>
+                <div class="tips">
+                    <div class="caret-top"></div>
+                    返回我的项目
+                </div>
+            </a>
+            <a class="nav-items" href="javascript:void(0)" onclick="designQuestionnaire()">
+                <div class="items-box">
+                    <i class="icon testDesign-icon"></i>
+                </div>
+                <br/>
+                <span class="items-name">设计问卷</span>
+                <em class="caret-left"></em>
+            </a>
+            <a class="nav-items" href="javascript:void(0)" onclick="ifSendQuestionnaire()">
+                <div class="items-box">
+                    <i class="icon issusPapers-icon"></i>
+                </div>
+                <br>
+                <span class="items-name">发送问卷</span>
+                <em class="caret-left"></em>
+            </a>
+            <a class="nav-items clicked" href="reviewAnswerQuestions.html">
+                <div class="items-box">
+                    <i class="icon resultsData-icon"></i>
+                </div>
+                <br>
+                <span class="items-name">分析&amp;下载</span>
+                <em class="caret-left"></em>
+            </a>
+        </div>
+    </div>
+    <div class="inside-wrapper">
+        <div class="inside-head clearfix" style="">
+            <div class="activity-box pull-left">
+            </div>
+            <a href="javascript:void(0)" id="ctl02_hrefView" target="_blank"
+               class="btnnew btn-default btn-lg btn-nobg view-btn" style="margin-left: 40px">预览问卷</a>
+            <!--下拉选择-->
+            <div class="activity-box pull-left">
+                <select class="form-control" title='问卷名称' data-first-option="false"
+                        data-live-search="true" style="height: 30px;width: 240px; padding: 2px 2px 2px 5px;" id="ddlActivitynew">
+                </select>
+            </div>
+            <div class="nav-show clearfix" id="toplabel">
+                <div class="nav-box clearfix" style="">
+                    <a class="nav-items pull-left" href="reviewAnswerQuestions.html">
+                        <label class="icon Answer4-icon"></label><br>
+                        <span>查看答题情况</span>
+                    </a>
+
+                    <a class="nav-items pull-left clicked" href="countQuestionnaire.html">
+                        <label class="icon Answer3-icon"></label><br>
+                        <span>答题统计</span>
+                    </a>
+                    <a class="nav-items pull-left" href="answerQuestCount.html">
+                        <label class="icon Answer2-icon"></label><br>
+                        <span>答案统计</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="inside-main">
+
+            <div class="inside-box">
+                <div class="box-items">
+
+                    <div style="clear:both"></div>
+                    <div class="step__evaluate article" style="text-align:left">
+                        <style>
+                            .SET-Guide {
+                                width: 740px !important;
+                            }
+
+                            .SET-Expansion h2 {
+                                font-size: 12px;
+                            }
+                        </style>
+
+                        <link id="ctl02_ContentPlaceHolder1_MyStyleSheet" rel="stylesheet" type="text/css">
+                        <link rel="stylesheet" type="text/css" href="../css/default.css">
+                        <link rel="stylesheet" href="../css/single-item-count.css?v=2" type="text/css">
+                        <div>
+                            <div>
+                                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                                       value="/wEPDwUKLTIyOTIzMDU2NmRk88cMvmS22/TkHA/5VM37Yd5WofA=">
+                            </div>
+
+                            <div>
+
+                                <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR"
+                                       value="0D1A2279">
+                            </div>
+                            <div class="sic_wrap">
+                                <div style="">
+                                    <div class="count_analyse_tab">
+                                        <style>
+                                            .count_analyse_tab ul li {
+                                                width: 25%;
+                                            }
+
+                                            .sic_wrap {
+                                                border: 0px;
+                                            }
+                                        </style>
+                                        <ul id="tabmenu" class="clearfix">
+
+                                            <li id="liFenLei"><a href="javascript:void(0);"
+                                                                 id="ctl02_ContentPlaceHolder1_ViewReport1_hrefFenLei"
+                                                                 onclick="changeTab('liFenLei');"><span>问卷答题统计</span></a>
+                                            </li>
+                                        </ul>
+                                        <!--问卷答题统计-->
+                                        <div id="divFenLei" style="display: none;"
+                                             class="cpbg">
+                                            <div class="playSet" style="border-bottom: 0;padding-bottom:0">
+
+                                            </div>
+                                        </div>
+                                        <!--题目答题统计-->
+                                        <div id="divJiaoCha" style="display: none;"
+                                             class="jcfxnew">
+                                            <div class="playSet" style="border-bottom:0px;padding-bottom:0">
+                                                <!--题目答题统计内容-->
+                                            </div>
+                                        </div>
+
+                                        <div id="divQuery" style="display:none;"
+                                             class="zdycx">
+                                            <div id="__calendarPanel"
+                                                 style="position:absolute;left:0px;top:-220px; visibility:hidden;z-index:9999;background-color:#FFFFFF;border:1px solid #666666;width:200px;height:216px;">
+                                                <iframe name="__calendarIframe" id="__calendarIframe" width="100%"
+                                                        height="100%" scrolling="no" frameborder="0"
+                                                        style="margin:0px;"></iframe>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <script type="text/javascript">
+
+                                    Array.prototype.indexOf = function (vItem) {
+                                        for (var i = 0, l = this.length; i < l; i++) {
+                                            if (this[i] == vItem) {
+                                                return i;
+                                            }
+                                        }
+                                        return -1;
+                                    };
+                                    Array.prototype.remove = function (vItem) {
+                                        this.removeAt(this.indexOf(vItem));
+                                        return vItem;
+                                    };
+
+                                    Array.prototype.removeAt = function (iIndex) {
+                                        var vItem = this[iIndex];
+                                        if (vItem) {
+                                            this.splice(iIndex, 1);
+                                        }
+                                        return vItem;
+                                    };
+
+                                    var prevTab = null;
+                                    var prevLi = null;
+                                    var divTabs = [document.getElementById("divFenLei"), document.getElementById("divJiaoCha")];
+                                    var divLis = ["liFenLei", "liJiaoCha"];
+                                    var isCeping = "";
+                                    var htData = new Object();
+                                    for (var i = 0; i < divLis.length; i++) {
+                                        htData[divLis[i]] = divTabs[i];
+                                    }
+                                    if (isCeping) {
+                                        htData["ctl02_ContentPlaceHolder1_ViewReport1_liCeping"] = document.getElementById("divFenLei");
+                                    }
+                                    var liCeping = "ctl02_ContentPlaceHolder1_ViewReport1_liCeping";
+                                    changeTab('liFenLei');
+
+                                    function changeTab(index) {
+                                        var currentTab = htData[index];
+                                        var currentLi = document.getElementById(index);
+                                        if (currentLi == prevLi)
+                                            return;
+                                        currentTab.style.display = "";
+                                        currentLi.className = "cur";
+                                        if (prevTab && prevTab != currentTab)
+                                            prevTab.style.display = "none";
+                                        prevTab = currentTab;
+                                        if (prevLi)
+                                            prevLi.className = "";
+                                        prevLi = currentLi;
+                                        if (index == "liFenLei") {
+                                        }
+                                    }
+                                </script>
+                                <div class="count_analyse_container">
+                                    <div id="divFilter1" class="mrbg">
+                                        <div class="playSet">
+                                            <div class="head clearfix">
+                                                <div class="htit pull-left">
+                                                    <i></i><span style="text-decoration: underline;cursor:pointer;"
+                                                                 id="questionNameCount"
+                                                                 onclick="showChartSet();"></span>
+                                                </div>
+                                            </div>
+                                            <script>
+                                                function showChartSet() {
+                                                    var divChartSet = document.getElementById("divChartSet1");
+                                                    divChartSet.style.display = divChartSet.style.display == "none" ? "" : "none";
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="divSumData1" class="the-end" style="width:766px;margin:0 auto">
+                                    <div style="clear: both;"></div>
+                                    <div id="ctl02_ContentPlaceHolder1_divStatData1">
+                                        <div class="title-item">
+
+                                            <div style="margin: 10px auto;text-align:center;"
+                                                 class="Picsetting">
+                                                <!--表格位置-->
+                                                <table id="sample-table-2"
+                                                       class="table table-bordered table-striped">
+                                                    <thead>
+                                                    <tr>
+                                                        <th style="text-align: center">类型</th>
+                                                        <th style="text-align: center">答题人数</th>
+                                                        <th style="text-align: center">总人数</th>
+                                                        <th style="text-align: center">答题率</th>
+                                                        <th style="text-align: center">有效答题人数</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody id="example1Tr1">
+                                                    </tbody>
+                                                </table>
+                                                <div style="clear:both;"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="count_analyse_container">
+                                    <div id="divFilter" class="mrbg">
+                                        <div class="playSet">
+                                            <div class="head clearfix">
+                                                <div class="htit pull-left">
+                                                    <i></i><span style="text-decoration: underline;cursor:pointer;"
+                                                                 id="questionNameDetail"
+                                                                 onclick="showChartSet();"></span>
+                                                </div>
+                                                <div class="pull-right" id="countExcel" onclick="getReport()">
+                                                    <a href="javascript:void(0)"
+                                                       class="down btn1">下载此报告</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="divSumData" class="the-end" style="width:766px;margin:0 auto">
+                                    <div style="clear: both;"></div>
+                                    <div id="ctl02_ContentPlaceHolder1_divStatData">
+                                        <div class="title-item">
+                                            <div class="main-wrapper">
+                                                <div class="survey-wrapper clearfix">
+                                                    <div id="ctl01_ContentPlaceHolder1_searchPapaer"
+                                                         class="survey-create clearfix">
+                                                        <div id="ctl01_ContentPlaceHolder1_divInfo"
+                                                             class="create-search pull-left"
+                                                             style="margin-right:10px;">
+                                                            <input name="ctl01$ContentPlaceHolder1$txtName"
+                                                                   type="text" placeholder="请输入学校名称进行搜索..."
+                                                                   id="keyWord" class="serarchbox"
+                                                                   onfocus="if(placeholder=='请输入学校名称进行搜索...'){placeholder='';}"
+                                                                   onblur="if(placeholder==''){placeholder='请输入学校名称进行搜索...';}"
+                                                            >
+
+                                                            <div class="icon search-icon buttonboder"
+                                                                 onclick="getQuestionnaireAboutSchool()"></div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="margin: 10px auto;text-align:center;"
+                                                 class="Picsetting">
+                                                <!--表格位置-->
+                                                <table id="countTable">
+                                                </table>
+                                                <div style="clear:both;"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="padding:10px 0 10px;">
+
+                                    </div>
+                                    <div style="clear: both;">
+                                    </div>
+                                    <div style="padding-bottom:30px;">
+
+                                        <div class="divclear"></div>
+                                    </div>
+                                    <div class="divclear"></div>
+                                </div>
+                            </div>
+
+                            <div style="clear: both">
+                            </div>
+                            <div style="height:20px;"></div>
+                        </div>
+                    </div>
+                    <div class="go" id="divGo">
+                        <a title="返回顶部" class="top" href="javascript:void(0);" onclick="gotop();"> <i class="icon"></i></a>
+                        <a title="返回底部" class="bottom" href="javascript:void(0);" onclick="gobottom();"><i
+                                class="icon"></i></a>
+                    </div>
+
+                    <script type="text/javascript">
+                        function gotop() {
+                            window.scroll(0, 0);
+                        }
+
+                        function gobottom() {
+                            window.scroll(0, 99999);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+<script src="../plugins/bootstrap/js/bootstrap.js"></script>
+<script src="../plugins/bootstrap-table/js/bootstrap-table.js"></script>
+<script src="../plugins/bootstrap-table/js/bootstrap-table-zh-CN.js"></script>
+<script src="../plugins/table-export/tableExport.js"></script>
+<script src="../plugins/table-export/jquery.base64.js"></script>
+<script src="../plugins/layer/layer.js"></script>
+<script src="../plugins/cookie/jquery.cookie.js"></script>
+<script src="../common/common.js"></script>
+<script src="../js/zhezhao.js?v=3" type="text/javascript"></script>
+<script src="../js/modernizr.js" type="text/javascript"></script>
+<script src="../js/selectpick.js?v=3" type="text/javascript"></script>
+<script src="answerQuestionJs/countQuestionnaire.js"></script>
+</body>
+</html>

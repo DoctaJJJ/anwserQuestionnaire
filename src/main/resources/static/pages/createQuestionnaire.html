@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl01_Head1">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta id="ctl01_keywords" name="keywords"/>
+    <title>创建问卷</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link id="ctl01_cssdefault" rel="stylesheet" type="text/css" href="../css/default.css?v=4"/>
+    <link id="ctl01_cssmaster" rel="stylesheet" type="text/css" href="../css/wjxmaster.css?v=4"/>
+    <link rel="stylesheet" type="text/css" href="../css/choosetype.css?v=4"/>
+    <style type="text/css">
+        .form-control {
+            display: inline-block;
+            width: 50%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            vertical-align: bottom;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+
+        /*.historyQuestionClass{*/
+        /*display: block;*/
+        /*}*/
+        #historyQuestion {
+            display: none;
+        }
+
+        #typeQuestion {
+            display: none;
+        }
+
+        .editModal {
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+            line-height: 36px;
+            border-width: 2px;
+            margin-left: -120px;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+<div id="BS">
+    <div class="header"></div>
+    <div class="modal fade" id="createQuestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="border-radius: 5px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <span aria-hidden="true">&times;</span></button>
+                    </button>
+                    <h3 class="modal-title" id="addPointLabel">创建问卷调查模板</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="questBelong" class="control-label">所属类型:</label>
+                        <input type="text" id="questBelong" class="form-control" style="width: 85%" readonly="readonly">
+                    </div>
+                    <div class="form-group">
+                        <label for="questNameModal" class="control-label">模板名称:</label>
+                        <input type="text" id="questNameModal" class="form-control" style="width: 85%">
+                    </div>
+                    <div class="form-group">
+                        <label for="questDescribeModal" class="control-label">模板说明:</label>
+                        <textarea type="text" id="questDescribeModal" class="form-control" style="width: 85%;vertical-align: -webkit-baseline-middle;"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" onclick="cancel()">取消</button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="createModal()">确定</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="BS-box" style="text-align:left;">
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                   value="/wEPDwUKLTY3MDU3Njg2NA9kFgJmD2QWDAICDxYCHgdWaXNpYmxlaGQCAw8WAh8AaGQCBA8WAh8AZ2QCBQ8PFgIeBFRleHQFCzE1ODQwMDY4OTczZGQCBg8WAh8AaGQCCA8WAh8AaGRkIOF/W2JYq+I88lfP3gF6rq014OM="/>
+        </div>
+        <div>
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4BF947A9"/>
+        </div>
+        <div class="nav-header">
+            <div class="container">
+                <div class="nav-wrapper clearfix">
+                    <h1 class="hd-title pull-left">创建问卷</h1>
+                </div>
+            </div>
+        </div>
+        <div class="section main-wrapper">
+            <div style="width: 737px;margin-top: 20px">
+                <label class="control-label fontWeight" style="font-size: 26px;margin-left: 124px;font-weight: 500">所属项目:</label>
+                <input class="form-control selectpicker" id="belongProject" title='所属项目' data-first-option="false"
+                       data-live-search="true" readonly="readonly" style="margin-left: 16px"/>
+            </div>
+            <div style="width: 737px;margin-top: 20px">
+                <label class="control-label fontWeight" style="font-size: 26px;margin-left: 124px;font-weight: 500">调查类型:</label>
+                <select class="form-control selectpicker" id="belongType" title='所属调查类型' data-first-option="false" onchange="changeType()"
+                        data-live-search="true" style="margin-left: 16px">
+                </select>
+            </div>
+            <h2 style="margin-top: 20px; width: 470px;font-size: 26px;margin-bottom: 15px;">选择模板:</h2>
+            <div class="module-box clearfix" id="divModule" style="margin: 0 auto;">
+                <div class="figure">
+                    <div class="pic-box icon survey-icon pull-left"></div>
+                    <div class="details-wrapper pull-left">
+                        <div class="details-title">
+                            <span class="pull-left">空白模板</span>
+                        </div>
+                        <div class="details-info">丰富题型，强大逻辑</div>
+                        <div class="details-info">问卷密码，红包抽奖</div>
+                    </div>
+                    <div class="clear dotted-line--solid"></div>
+
+                    <a class="btn btn-blue-frame main__btn--new" onclick="createQuestion()">创建</a>
+                </div>
+                <div class="figure">
+                    <i class="examfigurestar icon"></i>
+                    <div class="pic-box icon exam-icon pull-left"></div>
+                    <div class="details-wrapper pull-left">
+                        <div class="details-title">
+                            <span class="pull-left">导入历史问卷</span>
+                        </div>
+                        <div class="details-info">题库抽题，限时作答</div>
+                        <div class="details-info">成绩查询，自动阅卷</div>
+                    </div>
+                    <div class="clear dotted-line--solid"></div>
+
+                    <a href="javascript:void(0)" class="btn btn-blue-frame main__btn--new" onclick="importQuestion('1')">导入</a>
+
+                    <input type="checkbox" style="position:absolute;right:20px;bottom:25px;width:18px;height:18px;display:none;"/>
+                </div>
+                <div class="figure">
+                    <div class="pic-box icon survey-icon pull-left"></div>
+                    <div class="details-wrapper pull-left">
+                        <div class="details-title">
+                            <span class="pull-left">调查类型模板</span>
+                        </div>
+                        <div class="details-info">丰富题型，强大逻辑</div>
+                    </div>
+                    <div class="clear dotted-line--solid"></div>
+
+                    <a href="javascript:void(0)" class="btn btn-blue-frame main__btn--new" onclick="importQuestion('2')">导入</a>
+
+                    <input type="checkbox" style="position:absolute;right:20px;bottom:25px;width:18px;height:18px;display:none;"/>
+                </div>
+            </div>
+            <!--分割线-->
+            <div id='line'
+                 style="font-size: 18px;color: #cccccc;border-top: 1px solid #cccccc;width:1000px;margin:0 auto;display: none;margin-top: 30px;">
+                <em class="word"
+                    style="color:#888888;position: relative;top: -11px; font-style: normal;padding: 0 6px; background-color: #fff;">选择模板</em>
+            </div>
+            <div class="module-box clearfix" id="historyQuestion">
+
+            </div>
+            <div class="module-box clearfix" id="typeQuestion">
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display:none;"></div>
+<script src="../plugins/jQuery/jquery-1.12.4.min.js"></script>
+<script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../plugins/cookie/jquery.cookie.js"></script>
+<script src="../plugins/layer/layer.js"></script>
+<script src="../js/jquery.base64.js"></script>
+<script src="../common/common.js"></script>
+<script src="answerQuestionJs/createQuestionnaire.js"></script>
+</body>
+</html>
+
+ 
